@@ -1,0 +1,47 @@
+.section01 {
+  height: 100vh;
+  position: relative;
+
+  header {
+    width: 100vw;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    background: red;
+   
+    height: 100px;
+    align-items: center;
+
+    .gnb {
+      display: flex;
+      gap: 1rem;
+
+      li {
+      }
+    }
+
+    /* .logo {
+    } */
+
+    .right_menu {
+      display: flex;
+      gap: 1rem;
+
+      li {
+      }
+    }
+  }
+
+  .bg {
+    width: 1920px;
+    height: 1080px;
+    /* background-color: orange; 이미지 넣기 */
+    background-image: url(/public/메인\ 배경.png);
+  }
+
+  .textContents {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+  }
+}
