@@ -1,3 +1,7 @@
+body{
+  background-color: hsl(0, 0%, 90%);
+}
+
 .section01 {
   height: 100vh;
   position: relative;
@@ -13,36 +17,98 @@
     padding: 2%;
     box-sizing: border-box;
     position: absolute;
+    font-weight: 400;
 
     .gnb {
       display: flex;
-      gap: 1.5rem;
+      gap: 47px;
 
       li {
+        &:hover{
+          text-decoration: underline;
+          text-underline-offset: 5px; /* 밑줄과 텍스트 사이 간격 조정 */
+          cursor: pointer;
+        }
       }
     }
 
-    /* .logo {
-    } */
+    .logo {
+      position: absolute;
+      left: 50%;
+  transform: translateX(-50%);
+  transform: scale(1.05);
+        
+    }
 
     .right_menu {
       display: flex;
-      gap: 1rem;
+      gap: 47px;
 
-      li {
+      img {
+        width: 1.7rem;
+        height: 1.7rem;
+        object-fit: contain; /* 비율 유지하며 크기 조정 */
       }
     }
   }
 
   .bg {
-    width: 1920px;
-    height: 1080px;
-    background-image: url(/public/메인\ 배경.png);
+    
+      width: 100vw;   /* 가로 전체 (viewport width) */
+      height: 100vh;  /* 세로 전체 (viewport height) */
+      background-image: url(/public/section01/메인\ 배경.png);
+      background-size: cover; /* 이미지가 컨테이너에 맞게 조정됨 */
+      background-position: center; /* 이미지를 중앙에 정렬 */
+      background-repeat: no-repeat; /* 반복 제거 */
+    
+    
+    
+    
   }
 
   .textContents {
+    display: flex;
+    flex-direction: column; /* 🔥세로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
     position: absolute;
-    left: 30%;
-    top: 30%;
+    left: 8%;
+    bottom: 30%;
+ 
+    .page_na{
+      margin-bottom: 38px;
+    }
+
+    .main_title {
+      transform: scale(1.07); /* 1.5% 확대 (1.015 = 101.5%) */
+    }
+    
   }
+}
+
+
+.section02{
+
+
+  
+/* 메인비쥬얼이랑 띄우는데 마진 탑을 주는게 적절한지 */
+  .bestP_title{
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    margin-top: 180px;
+    margin-bottom: 63px;
+  }
+
+  .bestP_container{
+    display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  gap: 30px; /* 상품들 사이 간격 */
+  flex-wrap: wrap; /* 반응형 적용 시 줄바꿈 가능 */
+  gap: 24px;
+ 
+    
+    
+  }
+
+
+
 }
