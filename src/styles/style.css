@@ -56,7 +56,7 @@ body{
     
       width: 100vw;   /* 가로 전체 (viewport width) */
       height: 100vh;  /* 세로 전체 (viewport height) */
-      background-image: url(/public/section01/main1.png);
+      background-image: url(/section01/main1.png);
       background-size: cover; /* 이미지가 컨테이너에 맞게 조정됨 */
       background-position: center; /* 이미지를 중앙에 정렬 */
       background-repeat: no-repeat; /* 반복 제거 */
@@ -109,6 +109,8 @@ body{
     width: 423px;
     height: 502px;
   }
+
+
   }
 
 .bestP_04{
@@ -128,25 +130,39 @@ body{
 
 .section03{
 
-
-
   display: flex;
-background-repeat: no-repeat; /* 반복 방지 */
-flex: 1;
-
+  background-repeat: no-repeat; /* 반복 방지 */
+  width: 100vw;
+  
+  
 
   .section3left{
-    background-image: url(/public/section02/section3left.png);
+    background-image: url(/section02/section3left.png);
     width: 967px;
     height: 842px;
+   
     
   }
   .section3right{
-    background-image: url(/public/section02/section3right.png);
+    background-image: url(/section02/section3right.png);
     width: 967px;
     height: 842px;
-}
+    position: relative;
 
+
+    .section3contents{
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* 수평 및 수직으로 정렬 */
+    }
+
+    .section3_btn{
+     
+      
+      
+    }
+}
 
 
 }
