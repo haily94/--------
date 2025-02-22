@@ -157,9 +157,16 @@ body{
       transform: translate(-50%, -50%); /* 수평 및 수직으로 정렬 */
     }
 
-    .section3_btn{
+    .section3_btn_wrapper{
+
+      position: absolute;
+      bottom: 164px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 54px ;
      
-      
+
       
     }
 }
