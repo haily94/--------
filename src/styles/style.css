@@ -1,4 +1,4 @@
-body{
+body {
   background-color: hsl(40, 26%, 93%);
 }
 
@@ -17,6 +17,9 @@ body{
     padding: 2%;
     box-sizing: border-box;
     position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
     font-weight: 400;
 
     .gnb {
@@ -24,7 +27,7 @@ body{
       gap: 47px;
 
       li {
-        &:hover{
+        &:hover {
           text-decoration: underline;
           text-underline-offset: 5px; /* 밑줄과 텍스트 사이 간격 조정 */
           cursor: pointer;
@@ -35,14 +38,14 @@ body{
     .logo {
       position: absolute;
       left: 50%;
-  transform: translateX(-50%);
-  transform: scale(1.05);
-        
+      transform: translateX(-50%);
+      transform: scale(1.05);
     }
 
     .right_menu {
       display: flex;
       gap: 47px;
+      align-items: center;
 
       img {
         width: 1.7rem;
@@ -52,18 +55,9 @@ body{
     }
   }
 
-  .bg {
-    
-      width: 100vw;   /* 가로 전체 (viewport width) */
-      height: 100vh;  /* 세로 전체 (viewport height) */
-      background-image: url(/section01/main1.png);
-      background-size: cover; /* 이미지가 컨테이너에 맞게 조정됨 */
-      background-position: center; /* 이미지를 중앙에 정렬 */
-      background-repeat: no-repeat; /* 반복 제거 */
-    
-    
-    
-    
+  .swiper {
+    width: 100vw; /* 가로 전체 (viewport width) */
+    height: 100vh; /* 세로 전체 (viewport height) */
   }
 
   .textContents {
@@ -73,103 +67,82 @@ body{
     position: absolute;
     left: 8%;
     bottom: 30%;
- 
-    .page_na{
+    z-index: 10;
+
+    .page_na {
       margin-bottom: 38px;
     }
 
     .main_title {
       transform: scale(1.07); /* 1.5% 확대 (1.015 = 101.5%) */
     }
-    
   }
 }
 
-
-.section02{
-
-
-  
-/* 메인비쥬얼이랑 띄우는데 마진 탑을 주는게 적절한지 */
-  .bestP_title{
+.section02 {
+  padding-bottom: 200px;
+  height: initial;
+  /* 메인비쥬얼이랑 띄우는데 마진 탑을 주는게 적절한지 */
+  .bestP_title {
     display: flex;
     justify-content: center; /* 가로 중앙 정렬 */
     margin-top: 180px;
     margin-bottom: 63px;
   }
 
-  .bestP_container{
-    display: flex;
-  justify-content: center; /* 가로 중앙 정렬 */
-  gap: 24px; /* 상품들 사이 간격 */
-  flex-wrap: wrap; /* 반응형 적용 시 줄바꿈 가능 */
+  .bestP_container {
+    width: 1800px;
+    overflow: hidden;
 
-  .product_img{
-    margin-bottom: 20px;
-    width: 423px;
-    height: 502px;
+    .product_img {
+      margin-bottom: 20px;
+      width: 423px;
+      height: 502px;
+    }
   }
 
+  .bestP_04 {
+    position: relative;
+    display: inline-block;
 
+    .shop_all {
+      position: absolute;
+      top: -24px;
+      right: 0;
+    }
   }
-
-.bestP_04{
-  position: relative;
-  display: inline-block;
-
-  .shop_all{
-    position: absolute;
-    top: -24px;
-    right: 0;
-
-  }
-
 }
 
-}
-
-.section03{
-
+.section03 {
   display: flex;
   background-repeat: no-repeat; /* 반복 방지 */
   width: 100vw;
-  
-  
 
-  .section3left{
+  .section3left {
     background-image: url(/section02/section3left.png);
     width: 967px;
     height: 842px;
-   
-    
   }
-  .section3right{
+  .section3right {
     background-image: url(/section02/section3right.png);
     width: 967px;
     height: 842px;
     position: relative;
 
-
-    .section3contents{
+    .section3contents {
       position: absolute;
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%); /* 수평 및 수직으로 정렬 */
     }
 
-    .section3_btn_wrapper{
-
+    .section3_btn_wrapper {
       position: absolute;
       bottom: 164px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
-      gap: 54px ;
-     
-
-      
+      gap: 54px;
     }
-}
-
-
+  }
 }

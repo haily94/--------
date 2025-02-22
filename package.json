@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "gsap": "3.12.7",
-    "smooth-scrollbar": "8.8.4"
+    "smooth-scrollbar": "8.8.4",
+    "swiper": "11.2.4"
   }
 }
