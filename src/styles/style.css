@@ -1,5 +1,5 @@
 body{
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsl(40, 26%, 93%);
 }
 
 .section01 {
@@ -56,7 +56,7 @@ body{
     
       width: 100vw;   /* 가로 전체 (viewport width) */
       height: 100vh;  /* 세로 전체 (viewport height) */
-      background-image: url(/public/section01/메인\ 배경.png);
+      background-image: url(/public/section01/main1.png);
       background-size: cover; /* 이미지가 컨테이너에 맞게 조정됨 */
       background-position: center; /* 이미지를 중앙에 정렬 */
       background-repeat: no-repeat; /* 반복 제거 */
@@ -101,13 +101,51 @@ body{
   .bestP_container{
     display: flex;
   justify-content: center; /* 가로 중앙 정렬 */
-  gap: 30px; /* 상품들 사이 간격 */
+  gap: 24px; /* 상품들 사이 간격 */
   flex-wrap: wrap; /* 반응형 적용 시 줄바꿈 가능 */
-  gap: 24px;
- 
-    
+
+  .product_img{
+    margin-bottom: 20px;
+    width: 423px;
+    height: 502px;
+  }
+  }
+
+.bestP_04{
+  position: relative;
+  display: inline-block;
+
+  .shop_all{
+    position: absolute;
+    top: -24px;
+    right: 0;
+
+  }
+
+}
+
+}
+
+.section03{
+
+
+
+  display: flex;
+background-repeat: no-repeat; /* 반복 방지 */
+flex: 1;
+
+
+  .section3left{
+    background-image: url(/public/section02/section3left.png);
+    width: 967px;
+    height: 842px;
     
   }
+  .section3right{
+    background-image: url(/public/section02/section3right.png);
+    width: 967px;
+    height: 842px;
+}
 
 
 
