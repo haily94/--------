@@ -39,8 +39,8 @@ const swiper = new Swiper(".swiper", {
 });
 
 const swiper2 = new Swiper(".bestP_container", {
-  slidesPerView: 3,
-  spaceBetween: 30,
+  slidesPerView: 4,
+  spaceBetween: 20,
   // pagination: {
   //   el: ".swiper-pagination",
   //   clickable: true,

@@ -68,21 +68,31 @@ body {
     left: 8%;
     bottom: 30%;
     z-index: 10;
+    transform: scale(1.07); /* 1.5% 확대 (1.015 = 101.5%) */
 
     .page_na {
       margin-bottom: 38px;
     }
 
-    .main_title {
-      transform: scale(1.07); /* 1.5% 확대 (1.015 = 101.5%) */
-    }
   }
 }
 
 .section02 {
-  padding-bottom: 200px;
+  padding-bottom: 180px;
   height: initial;
-  /* 메인비쥬얼이랑 띄우는데 마진 탑을 주는게 적절한지 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .shop_all{
+    position: absolute;
+    top: 300px;
+    right: 80px;
+  }
+  
+ 
   .bestP_title {
     display: flex;
     justify-content: center; /* 가로 중앙 정렬 */
@@ -101,16 +111,7 @@ body {
     }
   }
 
-  .bestP_04 {
-    position: relative;
-    display: inline-block;
-
-    .shop_all {
-      position: absolute;
-      top: -24px;
-      right: 0;
-    }
-  }
+  
 }
 
 .section03 {
@@ -145,4 +146,102 @@ body {
       gap: 54px;
     }
   }
+}
+
+
+/* 🔥마진 바텀 섹션 5! */
+.section04{
+  position: relative;
+  margin-bottom: 950px;
+  
+
+  .side_textdeco{
+    position: absolute;
+    top: 892px;
+    left: 114px;
+    }
+
+  .Top_Section{
+    display: flex;
+    flex-direction: row;
+    padding-left: 120px;
+    padding-right: 120px;
+    
+
+
+  .TopBox01{
+    /* background-color: #ff000059; */
+    height: 790px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .section4title{
+      margin-left: 15px;
+      .SeasonPick_MT{
+        margin-top: 23px;
+        margin-bottom: 50px;
+      }
+    }
+   }
+
+   .TopBox02{
+    /* background-color: rgb(0 255 13 / 48%); */
+    height: 790px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center; /* 두 요소의 중심을 맞춤 */
+    gap: 68px;
+    }
+   }
+
+   .TopBox03{
+    /* background-color: rgb(51 61 173 / 55%); */
+    height: 790px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .cream_medel{
+      margin-top: auto;
+    }
+   }
+
+
+.Bottom_Section{
+  padding-right: 80px;  
+  margin-top: 210px;
+  
+  display: flex; /* 부모 요소를 플렉스로 설정 */
+  flex-direction: row; /* 가로 배치 */
+  gap: 26px; /* 두 박스 사이 간격 */
+  justify-content: end;
+  align-items: flex-start; /* 위쪽 정렬 */
+  
+ 
+  .bottombox01{
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+  }
+
+  .bottombox02{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: end;
+     align-items: center; /* 두 요소의 중심을 맞춤 */
+     gap: 68px;
+     margin-top: auto;
+     margin-left: 108px;
+    }
+  }
+  } 
+  
+
+.5_bg{
+
 }
