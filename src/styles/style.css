@@ -78,6 +78,7 @@ body {
 }
 
 .section02 {
+  background: url('/section04/bg_noise.png') ;
   padding-bottom: 180px;
   height: initial;
   display: flex;
@@ -152,8 +153,21 @@ body {
 /* 🔥마진 바텀 섹션 5! */
 .section04{
   position: relative;
-  margin-bottom: 950px;
+  /* margin-bottom: 950px; */
+  height: initial;
   
+  .circle{
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* z-index: -1; */
+
+    svg{
+      width: 1000px;
+      height: 1000px;
+    }
+    
+  }
 
   .side_textdeco{
     position: absolute;
@@ -183,7 +197,20 @@ body {
         margin-top: 23px;
         margin-bottom: 50px;
       }
+
     }
+   }
+
+   .section4title > *{
+      overflow: hidden;
+
+      img{
+        
+      }
+   }
+
+   .section4title img{
+    transform: translateY(300%);
    }
 
    .TopBox02{

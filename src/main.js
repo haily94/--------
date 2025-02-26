@@ -2,12 +2,14 @@ import "../lib/smooth";
 import "./styles/style.css";
 import Swiper from "swiper";
 import "swiper/css";
+import { markers } from "../lib/smooth";
 
-// import { gsap } from "gsap";
+import { gsap } from "gsap";
 // import { Draggable } from "gsap/Draggable";
 // import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 // gsap.registerPlugin(ScrollTrigger,Draggable,MotionPathPlugin);
 
 // 1. 터미널 창에서 npm i 실행한다.
@@ -46,3 +48,40 @@ const swiper2 = new Swiper(".bestP_container", {
   //   clickable: true,
   // },
 });
+
+
+
+
+const svg = document.querySelector('.circle_svg');
+const length = svg.getTotalLength();
+
+gsap.set(svg,{strokeDashoffset:length,strokeDasharray:length})
+
+
+// svg.setAttribute()
+
+
+
+ScrollTrigger.create({
+  trigger: '.section04',
+  start: 'top center',
+  end: 'bottom center',
+  onEnter:()=>{
+    gsap.to('.section4title img',{stagger:0.3,duration:1.5,y:0})
+  },
+  // animation: ,
+  // pin: false,
+  // pinSpacing: false,
+  // markers: true,
+  scrub: true,
+})
+
+
+
+
+
+
+markers()
+
+
+
