@@ -170,7 +170,7 @@ body {
 
 
   .TopBox01{
-    /* background-color: #ff000059; */
+   
     height: 790px;
     flex: 1;
     display: flex;
@@ -187,7 +187,7 @@ body {
    }
 
    .TopBox02{
-    /* background-color: rgb(0 255 13 / 48%); */
+ 
     height: 790px;
     flex: 1;
     display: flex;
@@ -199,7 +199,7 @@ body {
    }
 
    .TopBox03{
-    /* background-color: rgb(51 61 173 / 55%); */
+
     height: 790px;
     flex: 1;
     display: flex;
@@ -242,6 +242,131 @@ body {
   } 
   
 
-.5_bg{
+.section05{
+  .section5_bg{
+    background-image: url(/section05/section05_bg.png);
+    width: 1920px;
+    height: 945px;
+    display: flex;
+    flex-direction: row;
+  }
+
+
+.section5_left{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;     
+  justify-content: center; 
+  width:  1136px;
+  height: 945px;
+  /* background-color: #00ffffa1; */
+
+  
+  .section5_left_textbox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .section5_header{
+      margin-bottom: 33px;
+    }
+  
+    .section_title{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 66px; 
+    }
+  
+    .section5_contents{
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+    }
+
+    .section5_view_btn{
+      margin-top: 98px;
+    }
+  }
+}
+
+.section5_right{
+  width: 684px;
+  height: 945px;
+  /* background-color: dodgerblue; */
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  margin-right: 108px;
+
+  .right_img1 .right_img2{
+    width: 682px;
+    height: 462px;
+  }
+}
+}
+
+
+.section06{
+  margin-top: 208px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  .secion6_card_box{
+    background-color: black;
+    width: 1546px;
+    height: 774px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+
+    .section6_box1{
+      width: 390px;
+      height: 774px;
+      background-color: hotpink;
+
+      .section6_header{
+        margin-bottom: 30px;
+      }
+
+      .section6_title_box{
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+
+        .section6_title2{
+          margin-left: 112px;
+        }
+      }
+
+      .section6_img1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* margin-top: auto; */
+      }
+    }
+  
+    .section6_box2{
+      width: 644px;
+      height: 774px;
+      background-color: hotpink;
+    }
+  
+    .section6_box3{
+      width: 418px;
+      height: 774px;
+      background-color: hotpink;
+    }
+
+  }
+  
+
+  
 
 }
