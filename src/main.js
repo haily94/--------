@@ -55,7 +55,7 @@ const swiper2 = new Swiper(".bestP_container", {
 const svg = document.querySelector('.circle_svg');
 const length = svg.getTotalLength();
 
-gsap.set(svg,{strokeDashoffset:length,strokeDasharray:length})
+// gsap.set(svg,{strokeDashoffset:length,strokeDasharray:length})
 
 
 // svg.setAttribute()
@@ -63,11 +63,11 @@ gsap.set(svg,{strokeDashoffset:length,strokeDasharray:length})
 
 
 ScrollTrigger.create({
-  trigger: '.section04',
+  trigger: '.section02',
   start: 'top center',
   end: 'bottom center',
   onEnter:()=>{
-    gsap.to('.section4title img',{stagger:0.3,duration:1.5,y:0})
+    gsap.to('.section2title img',{stagger:0.1,duration:0.9,y:0})
   },
   // animation: ,
   // pin: false,
@@ -75,7 +75,21 @@ ScrollTrigger.create({
   // markers: true,
   scrub: true,
 })
-
+ 
+ScrollTrigger.create({
+  trigger: '.section04',
+  start: 'top center',
+  end: 'bottom center',
+  onEnter:()=>{
+    gsap.to('.section4title img',{stagger:0.1,duration:0.9,y:0})
+  },
+  // animation: ,
+  // pin: false,
+  // pinSpacing: false,
+  // markers: true,
+  scrub: true,
+})
+ 
 
 
 

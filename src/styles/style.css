@@ -1,5 +1,5 @@
 body {
-  background-color: hsl(40, 26%, 93%);
+  background-image: url(/section04/bg_noise.png);
 }
 
 .section01 {
@@ -78,7 +78,7 @@ body {
 }
 
 .section02 {
-  background: url('/section04/bg_noise.png') ;
+  padding-top: 206px;
   padding-bottom: 180px;
   height: initial;
   display: flex;
@@ -93,13 +93,17 @@ body {
     right: 80px;
   }
   
- 
-  .bestP_title {
+
+  .section2title{
     display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    margin-top: 180px;
-    margin-bottom: 63px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 65px;
   }
+ 
+
 
   .bestP_container {
     width: 1800px;
@@ -129,13 +133,27 @@ body {
     background-image: url(/section02/section3right.png);
     width: 967px;
     height: 842px;
-    position: relative;
+ 
 
-    .section3contents {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%); /* 수평 및 수직으로 정렬 */
+    .section3title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 204px;
+
+      .right_header{
+        margin-bottom: 38px;
+      }
+
+      .right_title01{
+        margin-bottom: 30px;
+      }
+
+      .section3_contents{
+        margin-top: 72px;
+      }
+     
     }
 
     .section3_btn_wrapper {
@@ -150,23 +168,34 @@ body {
 }
 
 
-/* 🔥마진 바텀 섹션 5! */
+
 .section04{
   position: relative;
-  /* margin-bottom: 950px; */
   height: initial;
+  margin-bottom: 200px;
   
-  .circle{
+  .circle01{
     position: absolute;
-    right: 0;
-    top: 0;
-    /* z-index: -1; */
+    right: -400px;
+    top: -700px;
+    z-index: -1;
 
     svg{
-      width: 1000px;
-      height: 1000px;
+      width: 1550px;
+      height: 1550px;
     }
-    
+  }
+
+  .circle02{
+    position: absolute;
+    left: -400px;
+    bottom: -200px;
+    z-index: -1;
+
+    svg{
+      width: 850px;
+      height: 850px;
+    }
   }
 
   .side_textdeco{
@@ -201,17 +230,15 @@ body {
     }
    }
 
+   /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
    .section4title > *{
       overflow: hidden;
-
-      img{
-        
-      }
    }
 
    .section4title img{
     transform: translateY(300%);
    }
+     /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
 
    .TopBox02{
  
@@ -240,7 +267,7 @@ body {
 
 .Bottom_Section{
   padding-right: 80px;  
-  margin-top: 210px;
+  margin-top: 180px;
   
   display: flex; /* 부모 요소를 플렉스로 설정 */
   flex-direction: row; /* 가로 배치 */
@@ -268,27 +295,23 @@ body {
   }
   } 
   
-
+/* *****height 초기화시켜서 맞춰줌***** */
 .section05{
   .section5_bg{
     background-image: url(/section05/section05_bg.png);
-    width: 1920px;
-    height: 945px;
     display: flex;
     flex-direction: row;
+    height: initial;
   }
 
 
 .section5_left{
-
   display: flex;
   flex-direction: column;
   align-items: center;     
   justify-content: center; 
   width:  1136px;
-  height: 945px;
-  /* background-color: #00ffffa1; */
-
+  
   
   .section5_left_textbox{
     display: flex;
@@ -321,7 +344,6 @@ body {
 .section5_right{
   width: 684px;
   height: 945px;
-  /* background-color: dodgerblue; */
   display: flex;
   flex-direction: column;
   gap: 21px;
@@ -336,64 +358,170 @@ body {
 
 
 .section06{
-  margin-top: 208px;
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  height: initial;
   
   .secion6_card_box{
-    background-color: black;
     width: 1546px;
-    height: 774px;
+    height: 806px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 48px;
+    position: relative;
+
+    .viewmore_btn{
+      position: absolute;
+      top: 0px;
+      right: 467px;
+    }
 
     .section6_box1{
       width: 390px;
-      height: 774px;
-      background-color: hotpink;
-
-      .section6_header{
-        margin-bottom: 30px;
-      }
+      height: 806px;
+      display: flex;
+      flex-direction: column;
+      padding-top: 15px;
+      box-sizing: border-box;
 
       .section6_title_box{
         display: flex;
         flex-direction: column;
-        gap: 26px;
+       
+        .section6_header{
+          margin-bottom: 30px;
+        }
 
         .section6_title2{
           margin-left: 112px;
+          margin-top: 26px;
+          margin-bottom: 42px;
         }
-      }
-
-      .section6_img1{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        /* margin-top: auto; */
       }
     }
   
     .section6_box2{
       width: 644px;
-      height: 774px;
-      background-color: hotpink;
+      height: 806px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      margin-top: auto;
     }
   
     .section6_box3{
       width: 418px;
-      height: 774px;
-      background-color: hotpink;
+      height: 806px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
 
+    .img3{
+      margin-bottom: 28px;
+    }
+
+    .contents{
+      margin-top: 22px;
+    }
   }
-  
-
-  
-
 }
+
+.section07{
+  height: initial;
+  margin-top: 200px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .section7_head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 58px;
+
+    .section7_header{
+      margin-bottom: 30px;
+    }
+  }
+
+  .section7_bottom{
+    width: 1740px;
+    height: 580px;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+   
+
+  }
+}
+
+.textline_deco{
+  height: initial;
+  margin-top: 210px;
+  margin-bottom: 38px;
+}
+
+.section08{
+  height: initial;
+  .footer_bg{
+    background-image: url(/public/section08/footer_bg.png);
+    height: 1424px;
+
+    .topsection_sns{
+     
+      .with_sulwhasoo{
+        display: flex;
+        justify-content: end;
+       padding-top: 180px;
+       padding-right: 86px;
+      }
+
+      .sns_picture{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 48px;
+
+      }
+
+    }
+
+    .bottom_section{
+      margin-top: 138px;
+      display: flex;
+
+      .bottom_left{
+        margin-left: 94px;
+        width: 960px;
+        display: flex;
+        flex-direction: column;
+
+        .logo{
+          margin-bottom: 146px;
+        }
+        .promotion_enjoy{
+          margin-bottom: 28px;
+        }
+      }
+
+      .bottom_right{
+        width: 960px;
+        padding-left: 94px;
+        /* background-color: black; */
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+        
+      }
+    }
+
+    
+  }
+}
+
