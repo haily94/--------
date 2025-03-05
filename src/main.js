@@ -61,6 +61,23 @@ const length = svg.getTotalLength();
 // svg.setAttribute()
 
 
+//⭐️타이틀 애니메이션(스크롤 트리거)
+
+
+
+// ScrollTrigger.create({
+//   trigger: '.section01',
+//   start: 'top center',
+//   end: 'bottom center',
+//   onEnter:()=>{
+//     gsap.to('.main_title img',{stagger:0.1,duration:0.9,y:0})
+//   },
+//   // animation: ,
+//   // pin: false,
+//   // pinSpacing: false,
+//   // markers: true,
+//   scrub: true,
+// })
 
 ScrollTrigger.create({
   trigger: '.section02',

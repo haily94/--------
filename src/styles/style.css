@@ -73,8 +73,16 @@ body {
     .page_na {
       margin-bottom: 38px;
     }
-
   }
+/*************⭐️타이틀 올라오는 애니메이션⭐️**************/
+/* .main_title > *{
+  overflow: hidden;
+}
+
+.main_title img{
+transform: translateY(300%);
+} */
+ /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
 }
 
 .section02 {
@@ -103,6 +111,18 @@ body {
     margin-bottom: 65px;
   }
  
+/*************⭐️타이틀 올라오는 애니메이션⭐️**************/
+.section2title > *{
+  overflow: hidden;
+}
+
+.section2title img{
+transform: translateY(300%);
+}
+ /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
+
+
+
 
 
   .bestP_container {
@@ -129,18 +149,18 @@ body {
     width: 967px;
     height: 842px;
   }
+
   .section3right {
     background-image: url(/section02/section3right.png);
     width: 967px;
     height: 842px;
  
-
     .section3title {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding-top: 204px;
+      margin-top: 184px;
 
       .right_header{
         margin-bottom: 38px;
@@ -157,11 +177,9 @@ body {
     }
 
     .section3_btn_wrapper {
-      position: absolute;
-      bottom: 164px;
-      left: 50%;
-      transform: translateX(-50%);
+      margin-top: 108px;
       display: flex;
+      justify-content: center;
       gap: 54px;
     }
   }
@@ -471,7 +489,7 @@ body {
 .section08{
   height: initial;
   .footer_bg{
-    background-image: url(/public/section08/footer_bg.png);
+    background-image: url(/section08/footer_bg.png);
     height: 1424px;
 
     .topsection_sns{
