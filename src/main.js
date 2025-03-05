@@ -1,7 +1,7 @@
 import "../lib/smooth";
 import "./styles/style.css";
-import Swiper from "swiper";
-import "swiper/css";
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 import { markers } from "../lib/smooth";
 
 import { gsap } from "gsap";
@@ -21,7 +21,7 @@ gsap.registerPlugin(ScrollTrigger);
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   // direction: 'vertical',
-  loop: true,
+  // loop: true,
 
   // If we need pagination
   // pagination: {
@@ -38,6 +38,37 @@ const swiper = new Swiper(".swiper", {
   // scrollbar: {
   //   el: '.swiper-scrollbar',
   // },
+
+});
+
+const header = document.querySelector('header');
+const titles = document.querySelectorAll('.title_container > div');
+
+gsap.set(titles,{y:100,opacity:0}) /* 초기 위치값 */
+gsap.to(titles[0],{y:0,opacity:1}) /* 처음 아이템 */
+
+
+swiper.on('slideChange', function (e) {
+  const index = e.realIndex;
+
+
+  gsap.to(titles,{y:100,opacity:0})
+
+  gsap.to(titles[index],{y:0,opacity:1}) /* 하나씩 등장 */
+
+  if(index === 0){
+     header.style.filter = 'brightness(1)'
+   
+  }
+
+  if(index === 1){
+    header.style.filter = 'brightness(0)'
+  }
+
+  if(index === 2){
+    header.style.filter = 'brightness(1)'
+  }
+    
 });
 
 const swiper2 = new Swiper(".bestP_container", {
@@ -48,6 +79,9 @@ const swiper2 = new Swiper(".bestP_container", {
   //   clickable: true,
   // },
 });
+
+
+
 
 
 
