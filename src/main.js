@@ -84,7 +84,7 @@ ScrollTrigger.create({
   start: 'top center',
   end: 'bottom center',
   onEnter:()=>{
-    gsap.to('.section2title img',{stagger:0.1,duration:0.9,y:0})
+    gsap.to('.section2title img',{stagger:0.1,duration:0.5,y:0})
   },
   // animation: ,
   // pin: false,
@@ -98,7 +98,7 @@ ScrollTrigger.create({
   start: 'top center',
   end: 'bottom center',
   onEnter:()=>{
-    gsap.to('.section4title img',{stagger:0.1,duration:0.9,y:0})
+    gsap.to('.section4title img',{stagger:0.1,duration:0.5,y:0})
   },
   // animation: ,
   // pin: false,
