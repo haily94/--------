@@ -1,0 +1,119 @@
+body{
+    background-color: white;
+
+}
+
+
+.section01{
+    display: flex;
+    flex-direction: row;
+    
+    .leftsection{
+        margin-left: 85px;
+        display: flex;
+        flex-direction: column;
+        width: 830px;
+        height: auto;
+
+        .main_product{
+            width: 828px;
+            height: 838px;
+            background-image: url(/public/detailpage/topsection/mainproduct.png);
+            margin-top: 14px;
+
+            .side_imgbox{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 40px;
+            }
+        }
+    }
+
+.rightsection{
+    width: 754px;
+   height: 754px;
+   margin-top: 45px;
+    /* background-color: blueviolet; */
+
+    .box1{
+        display: flex;
+        flex-direction: column;
+    
+
+        .header{
+            margin-bottom: 36px;
+        }
+
+        .title{
+            margin-bottom: 69px
+        }
+    }
+
+    .divider1 {
+        border: none;
+        height: 1px;
+        background-color: #c2c2c2; 
+        margin: 42px 42px; /* 위아래 간격 */
+    }
+
+    .box2{
+      
+        .size-selector{
+            .size-title {
+                color: #303030;
+                font-weight: 500;
+                font-size: 18px;
+                margin-bottom: 25px;
+            }
+            
+      
+            
+            /* 기본 라디오 버튼 숨기기 */
+            .radio-label input[type="radio"] {
+                display: none;
+            }
+            
+
+            .radio-label{
+                color: #303030;
+                font-weight: 500;
+            }
+
+
+            /* 커스텀 라디오 버튼 */
+            .custom-radio {
+                width: 14px;
+                height: 14px;
+                border: 2px solid #999;
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+                margin-right: 5px;
+            
+    
+            }
+            
+            /* 선택된 경우 내부 원 추가 */
+            .radio-label input[type="radio"]:checked + .custom-radio::after {
+                content: "";
+                width: 8px;
+                height: 8px;
+                background: #ff6600; /* 선택된 색상 */
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+        }
+
+    }
+    
+
+
+}
+
+
+}

@@ -96,29 +96,26 @@ const length = svg.getTotalLength();
 
 
 //⭐️타이틀 애니메이션(스크롤 트리거)
-
-
-
-// ScrollTrigger.create({
-//   trigger: '.section01',
-//   start: 'top center',
-//   end: 'bottom center',
-//   onEnter:()=>{
-//     gsap.to('.main_title img',{stagger:0.1,duration:0.9,y:0})
-//   },
-//   // animation: ,
-//   // pin: false,
-//   // pinSpacing: false,
-//   // markers: true,
-//   scrub: true,
-// })
-
 ScrollTrigger.create({
   trigger: '.section02',
   start: 'top center',
   end: 'bottom center',
   onEnter:()=>{
     gsap.to('.section2title img',{stagger:0.1,duration:0.5,y:0})
+  },
+  // animation: ,
+  // pin: false,
+  // pinSpacing: false,
+  // markers: true,
+  scrub: true,
+})
+
+ScrollTrigger.create({
+  trigger: '.section03',
+  start: 'top center',
+  end: 'bottom center',
+  onEnter:()=>{
+    gsap.to('.section3title img',{stagger:0.1,duration:0.5,y:0})
   },
   // animation: ,
   // pin: false,
@@ -140,7 +137,63 @@ ScrollTrigger.create({
   // markers: true,
   scrub: true,
 })
+
+ScrollTrigger.create({
+  trigger: '.section05',
+  start: 'top center',
+  end: 'bottom center',
+  onEnter:()=>{
+    gsap.to('.section5_left_textbox img',{stagger:0.1,duration:0.5,y:0})
+  },
+  // animation: ,
+  // pin: false,
+  // pinSpacing: false,
+  // markers: true,
+  scrub: true,
+})
  
+ScrollTrigger.create({
+  trigger: '.section06',
+  start: 'top center',
+  end: 'bottom center',
+  onEnter:()=>{
+    gsap.to('.section6_title_box img',{stagger:0.1,duration:0.5,y:0})
+  },
+  // animation: ,
+  // pin: false,
+  // pinSpacing: false,
+  // markers: true,
+  scrub: true,
+})
+ 
+// ❓❓❓❓❓❓❓❓
+ScrollTrigger.create({
+  trigger: '.section6_title_box',
+  start: 'top center',
+  end: 'bottom center',
+  onEnter:()=>{
+    gsap.to('.section6_detail_text_box',{stagger:0.1,duration:0.5,y:0})
+  },
+  // animation: ,
+  // pin: false,
+  // pinSpacing: false,
+  // markers: true,
+  scrub: true,
+})
+ 
+ScrollTrigger.create({
+  trigger: '.section07',
+  start: 'top center',
+  end: 'bottom center',
+  onEnter:()=>{
+    gsap.to('.section7_head img',{stagger:0.1,duration:0.5,y:0})
+  },
+  // animation: ,
+  // pin: false,
+  // pinSpacing: false,
+  // markers: true,
+  scrub: true,
+})
 
 
 
