@@ -29,10 +29,9 @@ const swiper = new Swiper(".swiper", {
   // },
 
   // // Navigation arrows
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  // },
+  navigation: {
+    nextEl: '.next_btn',
+  },
 
   // // And if we need scrollbar
   // scrollbar: {
@@ -55,6 +54,7 @@ swiper.on('slideChange', function (e) {
   gsap.to(titles,{y:100,opacity:0})
 
   gsap.to(titles[index],{y:0,opacity:1}) /* 하나씩 등장 */
+  gsap.to('.progress',{width:33.3333 * (index + 1)}) 
 
   if(index === 0){
      header.style.filter = 'brightness(1)'
@@ -68,6 +68,7 @@ swiper.on('slideChange', function (e) {
   if(index === 2){
     header.style.filter = 'brightness(1)'
   }
+  
     
 });
 
@@ -86,12 +87,6 @@ const swiper2 = new Swiper(".bestP_container", {
 
 
 
-const svg = document.querySelector('.circle_svg');
-const length = svg.getTotalLength();
-
-// gsap.set(svg,{strokeDashoffset:length,strokeDasharray:length})
-
-
 // svg.setAttribute()
 
 
@@ -102,8 +97,9 @@ ScrollTrigger.create({
   end: 'bottom center',
   onEnter:()=>{
     gsap.to('.section2title img',{stagger:0.1,duration:0.5,y:0})
+    
   },
-  // animation: ,
+  
   // pin: false,
   // pinSpacing: false,
   // markers: true,
@@ -123,20 +119,40 @@ ScrollTrigger.create({
   // markers: true,
   scrub: true,
 })
+
+
+const svg = document.querySelector('.circle_svg');
+const length = svg.getTotalLength();
+gsap.set(svg,{strokeDashoffset:length,strokeDasharray:length})
+
+
+const svg2 = document.querySelector('.circle_svg2');
+const length2 = svg2.getTotalLength();
+gsap.set(svg2,{strokeDashoffset:length2,strokeDasharray:length2})
+
+
+gsap.to(svg2,{strokeDashoffset:0})
  
 ScrollTrigger.create({
   trigger: '.section04',
-  start: 'top center',
+  start: '-300 center',
   end: 'bottom center',
   onEnter:()=>{
     gsap.to('.section4title img',{stagger:0.1,duration:0.5,y:0})
+    gsap.to('.creamteture_img',{delay:1,clipPath:'inset(0%)'})
+    gsap.to('.cream_medel',{duration:2.5,width:633,ease:'power3.inOut'})
+    gsap.to('.cream_medel img',{duration:3,scale:1,ease:'power3.inOut'})
   },
-  // animation: ,
+  animation: gsap.to(svg,{duration:5,strokeDashoffset:length*2}),
   // pin: false,
   // pinSpacing: false,
   // markers: true,
   scrub: true,
 })
+
+
+
+
 
 ScrollTrigger.create({
   trigger: '.section05',

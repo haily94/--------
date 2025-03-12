@@ -3,6 +3,14 @@ body{
 }
 
 
+button{
+    /* all:unset; */
+}
+
+header{
+    color: black;
+}
+
 .section01{
     display: flex;
     flex-direction: row;
@@ -206,6 +214,11 @@ body{
 
             &:hover{
                 background-color: #e66a00; 
+            }
+
+            &:active{
+                /* transform:translate(1px,1px); */
+                
             }
         }
 

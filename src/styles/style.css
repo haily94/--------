@@ -2,76 +2,15 @@ body {
   background-image: url(/section04/bg_noise.png);
 }
 
+video{
+  width: 100%;
+}
+
 .section01 {
   height: 100vh;
   position: relative;
 
-  header {
-    width: 100vw;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    /* background: red; */
-    height: 94px;
-    align-items: center;
-    padding: 2%;
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    font-weight: 400;
 
-    .gnb {
-      display: flex;
-      gap: 47px;
-      cursor: pointer;
-      
-      /* ********⭐️gnb호버했을 때 닷 뜨는 거, content가 공란이더라도 반드시 있어야함⭐️******** */
-      li:before{
-        content: '';
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: white;
-        position: absolute;
-        left: -15px;
-        transform:translateY(-50%);
-        top: 50%;
-        opacity: 0;
-        transition:all .5s;
-      };
-
-      li {
-        position: relative;
-        
-        &:hover:before  {
-          opacity: 1;
-          left: -10px;
-        }
-      }
-       /* ********⭐️gnb호버했을 때 닷 뜨는 거, before에서 opacity:0으로 줘서 안보이게 해놨다가 아래 호버에서 opacity:1로 보이게 함⭐️******** */
-    }
-
-    .logo {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      transform: scale(1.05);
-    }
-
-    .right_menu {
-      display: flex;
-      gap: 47px;
-      align-items: center;
-
-      img {
-        width: 1.7rem;
-        height: 1.7rem;
-        object-fit: contain; /* 비율 유지하며 크기 조정 */
-      }
-    }
-  }
 
   .swiper {
     width: 100vw; /* 가로 전체 (viewport width) */
@@ -99,6 +38,11 @@ body {
         width: 96px;
         height: 4px;
     
+        .progress{
+          height: 100%;
+          width: 30%;
+          background: #fff;
+        }
       }
     }
 
@@ -182,7 +126,6 @@ transform: translateY(300%);
 
     .swiper-slide{
       position: relative;
-
 
       .detail{
         width:  423px;
@@ -343,6 +286,10 @@ transform: translateY(300%);
         margin-bottom: 50px;
       }
     }
+
+    .creamteture_img{
+      clip-path: inset(50%);
+    }
    }
 
    /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
@@ -386,9 +333,21 @@ transform: translateY(300%);
     display: flex;
     flex-direction: column;
 
-    .cream_medel{
+    .cover{
       margin-top: auto;
+      width: 633px;
+      flex: 1;
+
+      .cream_medel{
+        width: 0;
+        overflow: hidden;
+
+        img{
+          scale:1.3
+        }
+      }
     }
+    
    }
 
 
