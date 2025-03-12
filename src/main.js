@@ -172,7 +172,7 @@ ScrollTrigger.create({
   start: 'top center',
   end: 'bottom center',
   onEnter:()=>{
-    gsap.to('.section6_detail_text_box',{stagger:0.1,duration:0.5,y:0})
+    gsap.to('.section6_detail_text_box img',{stagger:0.1,duration:0.5,y:0})
   },
   // animation: ,
   // pin: false,

@@ -13,6 +13,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    let heartButton = document.querySelector(".heart-btn");
+
+    heartButton.addEventListener("click", function () {
+        this.classList.toggle("active");
+    });
+});
+
+
+
+
+
 markers()
 
 
