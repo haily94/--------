@@ -17,6 +17,38 @@ gsap.registerPlugin(ScrollTrigger);
 // 3. npm run dev로 사이트를 연다.
 // 4. 코딩 시작.
 
+
+
+let FollowBox = ".pointer";
+gsap.set(FollowBox, {
+    xPercent: -50, yPercent: -50,scale:0
+});
+
+const pointerText = document.querySelector('.pointer span');
+
+
+
+const draggableArea = document.querySelector('.bestP_container');
+
+
+draggableArea.addEventListener('mouseenter', e => {
+    gsap.to(FollowBox, 0.5, {scale:1 });
+    pointerText.textContent = '남가현'
+});
+
+draggableArea.addEventListener('mousemove', e => {
+    gsap.to(FollowBox, 0.5, {duration:0.5, x: e.clientX, y: e.clientY, stagger: 0.15, ease: "none", });
+});
+
+draggableArea.addEventListener('mouseleave', e => {
+    gsap.to(FollowBox, 0.5, {scale:0});
+});
+
+
+
+
+
+
 // const swiper = new Swiper(...);
 const swiper = new Swiper(".swiper", {
   // Optional parameters
@@ -63,16 +95,19 @@ swiper.on('slideChange', function (e) {
   if(index === 0){
      header.style.filter = 'brightness(1)'
      pageSlideBtn.style.filter = 'brightness(1)'
+     gsap.to('target',{opacity:1})
   }
 
   if(index === 1){
     header.style.filter = 'brightness(0)'//이게 메인페이지2번 헤더 검정색으로 바꾼거
     pageSlideBtn.style.filter = 'brightness(0.3)'
+    gsap.to('target',{opacity:1})
   }
 
   if(index === 2){
     header.style.filter = 'brightness(1)'
     pageSlideBtn.style.filter = 'brightness(1)'
+    gsap.to('target',{opacity:0})
   }
 });
 
