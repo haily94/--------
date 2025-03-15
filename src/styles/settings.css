@@ -262,6 +262,10 @@ header {
     gap: 47px;
     align-items: center;
 
+    .shoppingsvg{
+      scale: 0.8;
+    }
+
     img {
       width: 1.7rem;
       height: 1.7rem;

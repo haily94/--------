@@ -24,26 +24,43 @@
 
             <!-- 나중에 로고 클릭하면 메인페이지 새로고침하는 기능, a태그사용? -->
             <!-- https://gsap.com/ -->
-            <h1 class="logo"><img src="/section01/brandlogo.png" alt="" /></h1>
+            <h1 class="logo"><img src="/detailpage/설화수 로고.png" alt="" /></h1>
 
             <ul class="right_menu">
               <li>KOR</li>
               <li>LOGIN</li>
-              <li><img src="/section01/shopping_bag.png" alt="" /></li>
+              <li class="shoppingsvg"><img src="/detailpage/shoppingsvg.png" alt="" /></li>
             </ul>
           </header>
           <div class="leftsection">
             <div class="category"><img src="/detailpage/topsection/category.png" alt="" /></div>
 
-            <div class="main_product">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="/detailpage/topsection/mainproduct.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="/detailpage/bottomsection/img01.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="/detailpage/bottomsection/img02.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="/detailpage/bottomsection/img03.png" alt="" />
+                </div>
+              
+              </div>
+            </div>
+
+            <!-- <div class="main_product">
               <div class="side_imgbox">
                 <div class="side_img1"><img src="/detailpage/topsection/side_img01.png" alt="" /></div>
                 <div class="side_img1"><img src="/detailpage/topsection/side_img02.png" alt="" /></div>
                 <div class="side_img1"><img src="/detailpage/topsection/side_img03.png" alt="" /></div>
                 <div class="side_img1"><img src="/detailpage/topsection/side_img04.png" alt="" /></div>
                </div>
-              
-            </div>
+            </div> -->
           </div>
 
           <div class="rightsection">
@@ -80,7 +97,7 @@
              
               <div class="amount-section">
                 <div class="amount-title">AMOUNT</div>
-                <div>
+                <div class="amoun-box">
                   <button class="decre" type="button"> - </button>
                   <span class="count">3</span>
                   <button class="incre" type="button"> + </button>
@@ -116,17 +133,58 @@
           </section>
 
           <section class="section02">
-            <div class="left-pngsection">
+            <div class="left-section">
               <div class="img01"><img src="/detailpage/bottomsection/img01.png" alt="" /></div>
               <div class="img02"><img src="/detailpage/bottomsection/img02.png" alt="" /></div>
               <div class="img03"><img src="/detailpage/bottomsection/img03.png" alt="" /></div>
             </div>
-            <div class="right-detailsection"></div>
+
+            <div class="right-detailsection">
+              <div class="detail-title"><img src="/detailpage/bottomsection/product-information.png" alt="" /></div>
+              <ul>
+                <li class="how-box">
+                  <div class="how-title"><img src="/detailpage/bottomsection/how-title.png" alt="" /></div>
+                  <div><img src="/detailpage/bottomsection/how-contents.png" alt="" /></div>
+                  <button class="minus"><img src="/detailpage/bottomsection/minus.png" alt="" /></button>
+                </li>
+
+                <li class="active-box">
+                  <div class="active-title"><img src="/detailpage/bottomsection/active-title.png" alt="" /></div>
+                  <div><img src="/detailpage/bottomsection/active-contents.png" alt="" /></div>
+                  <button class="minus"><img src="/detailpage/bottomsection/minus.png" alt="" /></button>
+                </li>
+
+                <li class="texture-box">
+                  <div class="texture-title"><img src="/detailpage/bottomsection/texture.png" alt="" /></div>
+                  <div><img src="/detailpage/bottomsection/texture-contents.png" alt="" /></div>
+                  <button class="minus"><img src="/detailpage/bottomsection/minus.png" alt="" /></button>
+                </li>
+
+                <li class="skin-box">
+                  <div class="skin-title"><img src="/detailpage/bottomsection/skin.png" alt="" /></div>
+                  <div><img src="/detailpage/bottomsection/skin-contents.png" alt="" /></div>
+                  <button class="minus"><img src="/detailpage/bottomsection/minus.png" alt="" /></button>
+                </li>
+              </ul>
+            </div>
           </section>
-
-
           
-          <section class="section03"> </section>
+          <section class="section03">
+            <div class="main-title">
+              <img src="/public/detailpage/bottomsection/alsolike-title.png" alt="" />
+            </div>
+            
+            <div class="alsolike-box">
+              <div class="swiper-wrappepr">
+                <div class="alsolike-swiper-slide">
+                  <img class="product_img" src="/public/detailpage/bottomsection/p01.png" alt="" />
+                  <div class="product-detail">
+                    <img src="/public/detailpage/bottomsection/p01-contents.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
 
 

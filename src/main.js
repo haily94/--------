@@ -29,6 +29,7 @@ const swiper = new Swiper(".swiper", {
   // },
 
   // // Navigation arrows
+  loop: true,
   navigation: {
     nextEl: '.next_btn',
   },
@@ -40,8 +41,11 @@ const swiper = new Swiper(".swiper", {
 
 });
 
+//✏️section 01✏️
 const header = document.querySelector('header');
 const titles = document.querySelectorAll('.title_container > div');
+const pageSlideBtn = document.querySelector(".page_slide_btn"); // 버튼 선택
+
 
 gsap.set(titles,{y:100,opacity:0}) /* 초기 위치값 */
 gsap.to(titles[0],{y:0,opacity:1}) /* 처음 아이템 */
@@ -58,20 +62,22 @@ swiper.on('slideChange', function (e) {
 
   if(index === 0){
      header.style.filter = 'brightness(1)'
-   
+     pageSlideBtn.style.filter = 'brightness(1)'
   }
 
   if(index === 1){
-    header.style.filter = 'brightness(0)'
+    header.style.filter = 'brightness(0)'//이게 메인페이지2번 헤더 검정색으로 바꾼거
+    pageSlideBtn.style.filter = 'brightness(0.3)'
   }
 
   if(index === 2){
     header.style.filter = 'brightness(1)'
+    pageSlideBtn.style.filter = 'brightness(1)'
   }
-  
-    
 });
 
+
+//✏️section 02✏️
 const swiper2 = new Swiper(".bestP_container", {
   slidesPerView: 4,
   spaceBetween: 20,
@@ -80,11 +86,6 @@ const swiper2 = new Swiper(".bestP_container", {
   //   clickable: true,
   // },
 });
-
-
-
-
-
 
 
 // svg.setAttribute()
@@ -97,15 +98,16 @@ ScrollTrigger.create({
   end: 'bottom center',
   onEnter:()=>{
     gsap.to('.section2title img',{stagger:0.1,duration:0.5,y:0})
-    
   },
-  
+
   // pin: false,
   // pinSpacing: false,
   // markers: true,
   scrub: true,
 })
 
+
+//✏️section 03✏️
 ScrollTrigger.create({
   trigger: '.section03',
   start: 'top center',
@@ -121,26 +123,28 @@ ScrollTrigger.create({
 })
 
 
-const svg = document.querySelector('.circle_svg');
+//✏️section 04✏️
+//🔴circle01
+const svg = document.querySelector('.circle_svg'); 
 const length = svg.getTotalLength();
 gsap.set(svg,{strokeDashoffset:length,strokeDasharray:length})
 
-
-const svg2 = document.querySelector('.circle_svg2');
+//🔴circle02
+const svg2 = document.querySelector('.circle_svg2'); //circle02 이펙트(svg, legnth가 써클01이랑 동일하면 안됌)
 const length2 = svg2.getTotalLength();
 gsap.set(svg2,{strokeDashoffset:length2,strokeDasharray:length2})
-
-
 gsap.to(svg2,{strokeDashoffset:0})
+
  
 ScrollTrigger.create({
   trigger: '.section04',
   start: '-300 center',
   end: 'bottom center',
   onEnter:()=>{
-    gsap.to('.section4title img',{stagger:0.1,duration:0.5,y:0})
-    gsap.to('.creamteture_img',{delay:1,clipPath:'inset(0%)'})
-    gsap.to('.cream_medel',{duration:2.5,width:633,ease:'power3.inOut'})
+    gsap.to('.section4title img',{stagger:0.1,duration:0.5,y:0}) //타이틀
+    // gsap.to('.creamteture_img',{delay:1,clipPath:'inset(0%)'}) //📙크림텍스쳐 안어울려서 일단 꺼놓음
+
+    gsap.to('.cream_medel',{duration:2.5,width:633,ease:'power3.inOut'}) //모델컷 효과
     gsap.to('.cream_medel img',{duration:3,scale:1,ease:'power3.inOut'})
   },
   animation: gsap.to(svg,{duration:5,strokeDashoffset:length*2}),
@@ -150,10 +154,23 @@ ScrollTrigger.create({
   scrub: true,
 })
 
+ScrollTrigger.create({
+  trigger: '.section04',
+  start: '300 center',
+  end: 'bottom center',
+  onEnter:()=>{
+    gsap.to('.serum_director',{duration:2.5,width:640,ease:'power3.inOut'})
+    gsap.to('.serum_director img',{duration:3,scale:1,ease:'power3.inOut'})
+  },
+  animation: gsap.to(svg2,{duration:5,strokeDashoffset:length*0}),//🔥이것도 그려지는 방향이 뭔가 이상함
+  // pin: false,
+  // pinSpacing: false,
+  // markers: true,
+  scrub: true,
+})
 
 
-
-
+//✏️section 05✏️
 ScrollTrigger.create({
   trigger: '.section05',
   start: 'top center',
@@ -167,13 +184,18 @@ ScrollTrigger.create({
   // markers: true,
   scrub: true,
 })
- 
+
+
+//✏️section 06-1✏️ 
 ScrollTrigger.create({
   trigger: '.section06',
   start: 'top center',
   end: 'bottom center',
   onEnter:()=>{
     gsap.to('.section6_title_box img',{stagger:0.1,duration:0.5,y:0})
+
+    gsap.to('.section6_img2',{duration:2.5,width:642,ease:'power3.inOut'}) //모델컷 효과
+    gsap.to('.section6_img2 img',{duration:3,scale:1,ease:'power3.inOut'})
   },
   // animation: ,
   // pin: false,
@@ -182,10 +204,10 @@ ScrollTrigger.create({
   scrub: true,
 })
  
-// ❓❓❓❓❓❓❓❓
+//✏️section 06-2✏️
 ScrollTrigger.create({
   trigger: '.section6_title_box',
-  start: 'top center',
+  start: '200 center',
   end: 'bottom center',
   onEnter:()=>{
     gsap.to('.section6_detail_text_box img',{stagger:0.1,duration:0.5,y:0})
