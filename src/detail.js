@@ -38,6 +38,15 @@ const swiper = new Swiper(".swiper", {
   navigation: {
     nextEl: '.next_btn',
   },
+  pagination: {
+    el: ".section01 .pagination",
+    bulletClass: "bullet",
+    bulletActiveClass: "active",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + `<img src="/detailpage/topsection/side_img0${index+1}.png" alt="" />` + "</span>";
+    },
+  },
 
   // // And if we need scrollbar
   // scrollbar: {

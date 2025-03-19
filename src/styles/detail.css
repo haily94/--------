@@ -1,423 +1,435 @@
-body{
-    background-color: white;
+body {
+  background-color: white;
 }
 
-
-button{
-    all:unset;
+button {
+  all: unset;
 }
 
-header{
-    color: black;
+header {
+  color: black;
 
-
-    .gnb{
-        li:before{
-            content: '';
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background:#e66a00;
-            position: absolute;
-            left: -15px;
-            transform:translateY(-50%);
-            top: 50%;
-            opacity: 0;
-            transition:all .5s;
-          };
-
-          
+  .gnb {
+    li:before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #e66a00;
+      position: absolute;
+      left: -15px;
+      transform: translateY(-50%);
+      top: 50%;
+      opacity: 0;
+      transition: all 0.5s;
     }
+  }
 }
 
-.section01{
+.section01 {
+  display: flex;
+  flex-direction: row;
+  height: initial;
+  padding-bottom: 38px;
+
+  .leftsection {
+    margin-left: 85px;
+    margin-top: 120px;
     display: flex;
-    flex-direction: row;
-    height: initial;
-    padding-bottom: 38px;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
 
-    .leftsection{
-        margin-left: 85px;
-        margin-top: 120px;
-        display: flex;
-        flex-direction: column;
-       justify-content: flex-start;
-        flex: 1;
-        
-        .swiper{
-            width: 828px;
-            height: 838px;
-            margin-top: 14px;
-            margin-left: initial;
-        }
+    .swiper {
+      width: 828px;
+      height: 838px;
+      margin-top: 14px;
+      margin-left: initial;
     }
+  }
 
-    .rightsection{
-   flex: 1;
-   margin-top: 160px;
-   padding-left: 80px;
+  .rightsection {
+    flex: 1;
+    margin-top: 160px;
+    padding-left: 80px;
 
-    .box1{
-        display: flex;
-        flex-direction: column;
-    
+    .box1 {
+      display: flex;
+      flex-direction: column;
 
-        .header{
-            margin-bottom: 36px;
-        }
+      .header {
+        margin-bottom: 36px;
+      }
 
-        .title{
-            margin-bottom: 69px
-        }
+      .title {
+        margin-bottom: 69px;
+      }
     }
 
     .divider1 {
-        border: none;
-        height: 1px;
-        width: 747px;
-        background-color: #c2c2c2; 
-        margin-top: 45px;
-        margin-bottom: 45px;
+      border: none;
+      height: 1px;
+      width: 747px;
+      background-color: #c2c2c2;
+      margin-top: 45px;
+      margin-bottom: 45px;
     }
 
     .box2 {
-        width: 747px;
-        display: flex;
-        align-items: center;
+      width: 747px;
+      display: flex;
+      align-items: center;
 
-        .size-section{
-            flex: 1;
-    
-            .size-title{
-                margin-bottom: 25px;
-                color: #303030;
-                font-weight: 600;
-                font-size: 18px; 
-            }
-    
-            .size-selector {
-                display: flex;
-                align-items: center;
-                gap: 38px;
-    
-                .radio-label {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    font-size: 17px;
-                    font-weight: 600;
-                    color: #434343;
-                }
-                
-                /* 기본 라디오 버튼 숨기기 */
-                .radio-label input[type="radio"] {
-                    display: none;
-                }
-                
-                /* 커스텀 라디오 버튼 */
-                .custom-radio {
-                    width: 14px;
-                    height: 14px;
-                    border: 2px solid #999;
-                    border-radius: 50%;
-                    display: inline-block;
-                    position: relative;
-                }
-                
-                /* 선택된 경우 내부 원 추가 */
-                .radio-label input[type="radio"]:checked + .custom-radio::after {
-                    content: "";
-                    width: 8px;
-                    height: 8px;
-                    background: #ff6600; /* 선택된 색상 */
-                    border-radius: 50%;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-            }
+      .size-section {
+        flex: 1;
+
+        .size-title {
+          margin-bottom: 25px;
+          color: #303030;
+          font-weight: 600;
+          font-size: 18px;
         }
-        
-       
-    
-        .amount-section{
-            flex: 1;
-    
-            .amount-title{
-                margin-bottom: 25px;
-                color: #303030;
-                font-weight: 600;
-                font-size: 18px; 
-            }
 
-            .amoun-box{
-                width: 134px;
-                height: 40px;
-                border: solid 1px #c2c2c2; 
-                color: #434343;
-                display: flex;
-                /* flex-direction: row; */
-                justify-content: center;
-                align-items: center;
-                gap:20px;
+        .size-selector {
+          display: flex;
+          align-items: center;
+          gap: 38px;
 
-                button{
-                    padding: 0.5rem;
-                    cursor: pointer;
-                }
-                
-                span{
-                    font-weight: 600;
-                }
-            }
+          .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #434343;
+          }
+
+          /* 기본 라디오 버튼 숨기기 */
+          .radio-label input[type="radio"] {
+            display: none;
+          }
+
+          /* 커스텀 라디오 버튼 */
+          .custom-radio {
+            width: 14px;
+            height: 14px;
+            border: 2px solid #999;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+          }
+
+          /* 선택된 경우 내부 원 추가 */
+          .radio-label input[type="radio"]:checked + .custom-radio::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: #ff6600; /* 선택된 색상 */
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
+      }
+
+      .amount-section {
+        flex: 1;
+
+        .amount-title {
+          margin-bottom: 25px;
+          color: #303030;
+          font-weight: 600;
+          font-size: 18px;
+        }
+
+        .amoun-box {
+          width: 134px;
+          height: 40px;
+          border: solid 1px #c2c2c2;
+          color: #434343;
+          display: flex;
+          /* flex-direction: row; */
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+
+          button {
+            padding: 0.5rem;
+            cursor: pointer;
+          }
+
+          span {
+            font-weight: 600;
+          }
+        }
+      }
     }
 
     .divider2 {
-        border: none;
-        height: 1.5px;
-        width: 747px;
-        background-color: #c2c2c2; 
-        margin-top: 45px;
-        margin-bottom: 45px;
+      border: none;
+      height: 1.5px;
+      width: 747px;
+      background-color: #c2c2c2;
+      margin-top: 45px;
+      margin-bottom: 45px;
     }
 
-    .box3{
-        width: 747px;
+    .box3 {
+      width: 747px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .total-price {
+        color: black;
+        font-size: 32px;
+        font-weight: 600;
+      }
+
+      .wishlist-section {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-
-        .total-price{
-            color: black;
-            font-size: 32px;
-            font-weight: 600;
-        }
-
-        .wishlist-section{
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        gap: 12px;
 
         .wishlist-title {
-            font-size: 17px;
-            font-weight: 600;
-            color: #555;
+          font-size: 17px;
+          font-weight: 600;
+          color: #555;
         }
 
         .heart-btn {
-            all: unset; /* 기본 버튼 스타일 초기화 */
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 22px; /* 크기 조정 가능 */
-            height: 22px;
+          all: unset; /* 기본 버튼 스타일 초기화 */
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 22px; /* 크기 조정 가능 */
+          height: 22px;
         }
-        
+
         .heart-btn svg {
-            transition: fill 0.3s ease, stroke 0.3s ease;
-            fill: none; /* 기본적으로 투명 */
-            stroke: #555; /* 기본 테두리 색상 */
+          transition: fill 0.3s ease, stroke 0.3s ease;
+          fill: none; /* 기본적으로 투명 */
+          stroke: #555; /* 기본 테두리 색상 */
         }
-        
+
         .heart-btn.active svg {
-            fill: #ff7300;
-            stroke: #ff7300;
+          fill: #ff7300;
+          stroke: #ff7300;
         }
-        }
+      }
     }
 
     /* 버튼 호버했을 때 너무 구림...애니메이션 추천할만한거 있나요?! */
-    .box4{
-        width: 747px;
+    .box4 {
+      width: 747px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 54px;
+
+      .bag-btn {
+        all: unset;
+        background-color: #ff7300;
+        width: 369px;
+        height: 72px;
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
         display: flex;
-        justify-content: space-between;
-        margin-top: 54px;
-       
-        .bag-btn{
-            all: unset; 
-            background-color: #ff7300;
-            width: 369px;
-            height: 72px;
-            color: white;
-            font-size: 22px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease-in-out;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
 
-            &:after {
-                content: "→";
-                position: absolute;
-                top: 33%;
-                right: -60px; /* 초기에 버튼 오른쪽 바깥에 위치 */
-                width: 60px;
-                height: 100%;
-                background-color: rgba(255, 255, 255, 0.641);
-                transition: all 0.3s ease-in-out;
-            }
-
-            &:hover {
-                text-indent: -30px; /* 텍스트를 왼쪽으로 이동 */
+        &:after {
+          content: "→";
+          position: absolute;
+          top: 0;
+          right: -60px; /* 초기에 버튼 오른쪽 바깥에 위치 */
+          width: 60px;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.641);
+          transition: all 0.3s ease-in-out;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
-        
 
-
-
-
-        .buy-btn{
-            all: unset; 
-            background: white;
-            border: 1.5px solid #303030;
-            width: 369px;
-            height: 72px;
-            color: #303030;
-            font-size: 22px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-           
-            &:hover{
-                background: #f8f8f8;
-            }
+        &:hover:after {
+            right: 0;
         }
-      
-    }
-}
-    }
-}
-  
 
+        .buy-btn {
+          all: unset;
+          background: white;
+          border: 1.5px solid #303030;
+          width: 369px;
+          height: 72px;
+          color: #303030;
+          font-size: 22px;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-.section02{
+          &:hover {
+            background: #f8f8f8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pagination{
+    position: absolute;
+    left: 0;
+    top: 0 !important;
     display: flex;
-    flex-direction: row;
-    height: initial;
-    padding-bottom: 220px;
+    flex-direction: column;
+    gap:1rem;
+    z-index: 1000;
 
-    .left-section{
-        flex: 1;
-        margin-left: 85px;
-        display: flex;
-        flex-direction: column;
-        gap: 42px;
-    }
+    .bullet{
+        display: block;
+        width: 93px;
+        height: 94px;
+        filter: grayscale(1);
+        border: 1px solid transparent;
+        transition: all .5s; 
+        cursor: pointer;
 
-    .right-detailsection{
-        flex: 1;
-        padding-left: 80px;
-        margin-top: 10px;
-    
 
-        & > ul{
-
-            & li{
-                position: relative;
-                overflow: hidden;
-                height: 80px;
-                display: flex;
-                align-items: center;
-
-                .plus{
-                    position: absolute;
-                    right: 10px;
-                    top: 45%;
-                    cursor:pointer
-                }
-
-                .depth{
-                    opacity: 0;
-                }
-            }
+        &.active{
+            border: 1px solid red;
+            filter: grayscale(0);
         }
-        
-        .how-box, .active-box, .texture-box, .skin-box{
-            display: flex;
-            width: 747px;
-            border-bottom:solid 1px #555;
-            /* padding-top: 45px; */
-            /* padding-bottom: 45px; */
-        }
-
-        .how-box{
-            margin-top: 30px;
-            border-top: solid 2px #555;
-        }
-
-        /* 이렇게 맞춰주는게 맞나?! */
-        .how-title,.active-title,.texture-title,.skin-title{
-           width: 220px;
-        } 
-     
     }
 }
 
+.section02 {
+  display: flex;
+  flex-direction: row;
+  height: initial;
+  padding-bottom: 220px;
 
-.section03{
-    height: initial;
-    margin-bottom: 170px;
-    
-    .main-title{
-        margin-bottom: 65px;
-        padding-left: 85px;
-        
+  .left-section {
+    flex: 1;
+    margin-left: 85px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+  }
+
+  .right-detailsection {
+    flex: 1;
+    padding-left: 80px;
+    margin-top: 10px;
+
+    & > ul {
+      & li {
+        position: relative;
+        overflow: hidden;
+        height: 80px;
+        display: flex;
+        align-items: center;
+
+        .plus {
+          position: absolute;
+          right: 10px;
+          top: 45%;
+          cursor: pointer;
+        }
+
+        .depth {
+          opacity: 0;
+        }
+      }
     }
-    .swiper-wrappepr{
+
+    .how-box,
+    .active-box,
+    .texture-box,
+    .skin-box {
+      display: flex;
+      width: 747px;
+      border-bottom: solid 1px #555;
+      /* padding-top: 45px; */
+      /* padding-bottom: 45px; */
+    }
+
+    .how-box {
+      margin-top: 30px;
+      border-top: solid 2px #555;
+    }
+
+    /* 이렇게 맞춰주는게 맞나?! */
+    .how-title,
+    .active-title,
+    .texture-title,
+    .skin-title {
+      width: 220px;
+    }
+  }
+}
+
+.section03 {
+  height: initial;
+  margin-bottom: 170px;
+
+  .main-title {
+    margin-bottom: 65px;
+    padding-left: 85px;
+  }
+  .swiper-wrappepr {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    .alsolike-swiper-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 22px;
+      position: relative;
+
+      .detail {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 409px;
+        height: 452px;
+        background: #ff7300a0;
+        backdrop-filter: blur(7px);
+        opacity: 0;
+        transition: all 0.5s;
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 30px;
 
-        .alsolike-swiper-slide{
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            gap: 22px;
-            position: relative;
+        /* paddign bottom으로 밑줄과 텍스트 사이에 간격을 줌  */
+        span {
+          padding-bottom: 3px;
+          font-weight: 500;
+          font-size: 18px;
 
-            
-
-            .detail{
-                position: absolute;
-                left: 0;
-                top: 0;
-                width:  409px;
-                height: 452px;
-                background: #ff7300a0;
-                backdrop-filter: blur(7px);
-                opacity: 0;
-                transition: all .5s;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 30px;
-                
-        
-                /* paddign bottom으로 밑줄과 텍스트 사이에 간격을 줌  */
-                span{
-                  padding-bottom: 3px;
-                  font-weight: 500;
-                  font-size: 18px;
-                  
-                  &:hover{
-                    border-bottom: 2px solid white;
-                  }
-                }
-              }
-        
-              &:hover .detail{
-                opacity: 1;
-              }
+          &:hover {
+            border-bottom: 2px solid white;
+          }
         }
+      }
 
+      &:hover .detail {
+        opacity: 1;
+      }
     }
+  }
 }
-.footer{
-    height: 724px;
-    display: flex;
+.footer {
+  height: 724px;
+  display: flex;
 }

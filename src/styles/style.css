@@ -2,11 +2,11 @@ body {
   background-image: url(/section04/bg_noise.png);
 }
 
-video{
+video {
   width: 100%;
 }
 
-.pointer{
+.pointer {
   width: 200px;
   height: 200px;
   position: fixed;
@@ -21,7 +21,6 @@ video{
 .section01 {
   height: 100vh;
   position: relative;
-
 
   .swiper {
     width: 100vw; /* 가로 전체 (viewport width) */
@@ -38,18 +37,18 @@ video{
     z-index: 10;
     transform: scale(1.07); /* 1.5% 확대 (1.015 = 101.5%) */
 
-    .page_slide_btn{
+    .page_slide_btn {
       margin-bottom: 30px;
       display: flex;
       align-items: center;
       gap: 22px;
 
-      .page_slide_bar{
+      .page_slide_bar {
         background-color: rgba(255, 255, 255, 0.492);
         width: 96px;
         height: 4px;
-    
-        .progress{
+
+        .progress {
           height: 100%;
           width: 30%;
           background: #fff;
@@ -57,12 +56,12 @@ video{
       }
     }
 
-    .title_container{
+    .title_container {
       width: 940px;
       height: 350px;
       position: relative;
 
-      & > div{
+      & > div {
         position: absolute;
         left: 0;
         top: 0;
@@ -71,8 +70,7 @@ video{
         transform: translateY(50px); */
       }
 
-      & > div:nth-child(2){
-
+      & > div:nth-child(2) {
         left: 750px;
         top: 0px;
       }
@@ -82,7 +80,6 @@ video{
       } */
     }
   }
-
 }
 
 .section02 {
@@ -95,14 +92,13 @@ video{
   align-items: center;
   position: relative;
 
-  .shop_all{
+  .shop_all {
     position: absolute;
     top: 300px;
     right: 80px;
   }
-  
 
-  .section2title{
+  .section2title {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,20 +106,16 @@ video{
     gap: 28px;
     margin-bottom: 65px;
   }
- 
-/*************⭐️타이틀 올라오는 애니메이션⭐️**************/
-.section2title > *{
-  overflow: hidden;
-}
 
-.section2title img{
-transform: translateY(300%);
-}
- /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
+  /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
+  .section2title > * {
+    overflow: hidden;
+  }
 
-
-
-
+  .section2title img {
+    transform: translateY(300%);
+  }
+  /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
 
   .bestP_container {
     width: 1800px;
@@ -136,50 +128,48 @@ transform: translateY(300%);
       height: 502px;
     }
 
-    .swiper-slide{
+    .swiper-slide {
       position: relative;
 
-      .detail{
+      .detail {
         position: absolute;
         left: 0;
         top: 0;
-        width:  423px;
+        width: 423px;
         height: 502px;
         background: #ff7300a0;
         backdrop-filter: blur(7px);
         opacity: 0;
-        transition: all .5s;
+        transition: all 0.5s;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 30px;
-        
 
         /* paddign bottom으로 밑줄과 텍스트 사이에 간격을 줌  */
-        span{
+        span {
           padding-bottom: 3px;
           font-weight: 500;
           font-size: 18px;
-          
-          &:hover{
+
+          &:hover {
             border-bottom: 2px solid white;
           }
         }
       }
 
-      &:hover .detail{
+      &:hover .detail {
         opacity: 1;
       }
-    
     }
-    
+
     /* even: 짝수, odd: 홀수 */
-    .swiper-slide:nth-child(even){
+    .swiper-slide:nth-child(even) {
       padding-top: 2rem;
     }
 
-    .swiper-slide:nth-child(even) .detail{
-    margin-top: 2rem;
+    .swiper-slide:nth-child(even) .detail {
+      margin-top: 2rem;
     }
   }
 }
@@ -199,7 +189,7 @@ transform: translateY(300%);
     background-image: url(/section02/section3right.png);
     width: 967px;
     height: 842px;
- 
+
     .section3title {
       display: flex;
       flex-direction: column;
@@ -207,29 +197,28 @@ transform: translateY(300%);
       align-items: center;
       margin-top: 184px;
 
-      .right_header{
+      .right_header {
         margin-bottom: 38px;
       }
 
-      .right_title01{
+      .right_title01 {
         margin-bottom: 30px;
       }
 
-      .section3_contents{
+      .section3_contents {
         margin-top: 72px;
       }
-     
     }
 
     /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
-.section3title > *{
-  overflow: hidden;
-}
+    .section3title > * {
+      overflow: hidden;
+    }
 
-.section3title img{
-transform: translateY(300%);
-}
- /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
+    .section3title img {
+      transform: translateY(300%);
+    }
+    /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
 
     .section3_btn_wrapper {
       margin-top: 108px;
@@ -240,269 +229,257 @@ transform: translateY(300%);
   }
 }
 
-
-.section04{
+.section04 {
   position: relative;
   height: initial;
   margin-bottom: 200px;
-  
-  .circle01{
+
+  .circle01 {
     position: absolute;
     right: -400px;
     top: -700px;
     z-index: -1;
 
-    svg{
+    svg {
       width: 1550px;
       height: 1550px;
     }
   }
 
-  .circle02{
+  .circle02 {
     position: absolute;
     left: -400px;
     bottom: -200px;
     z-index: -1;
 
-    svg{
+    svg {
       width: 850px;
       height: 850px;
     }
   }
 
-  .side_textdeco{
+  .side_textdeco {
     position: absolute;
     top: 892px;
     left: 114px;
-    }
+  }
 
-  .Top_Section{
+  .Top_Section {
     display: flex;
     flex-direction: row;
     padding-left: 120px;
     padding-right: 120px;
-    
 
+    .TopBox01 {
+      height: 790px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-  .TopBox01{
-    height: 790px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .section4title{
-      margin-left: 15px;
-      .SeasonPick_MT{
-        margin-top: 23px;
-        margin-bottom: 50px;
+      .section4title {
+        margin-left: 15px;
+        .SeasonPick_MT {
+          margin-top: 23px;
+          margin-bottom: 50px;
+        }
       }
-    }
 
-    /* 📙크림텍스쳐 안어울려서 일단 꺼놓음 */
-/* 
+      /* 📙크림텍스쳐 안어울려서 일단 꺼놓음 */
+      /* 
     .creamteture_img{
       clip-path: inset(50%);
     } */
-   }
-
-   /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
-   .section4title > *{
-      overflow: hidden;
-   }
-
-   .section4title img{
-    transform: translateY(300%);
-   }
-     /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
-
-   .TopBox02{
-    height: 790px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center; /* 두 요소의 중심을 맞춤 */
-    gap: 68px;
     }
-    
+
+    /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
+    .section4title > * {
+      overflow: hidden;
+    }
+
+    .section4title img {
+      transform: translateY(300%);
+    }
+    /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
+
+    .TopBox02 {
+      height: 790px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: center; /* 두 요소의 중심을 맞춤 */
+      gap: 68px;
+    }
+
     .ginseng_img {
       display: inline-block; /* 요소 크기 조절을 위해 inline-block 설정 */
-  }
-  
-  .ginseng_img img {
+    }
+
+    .ginseng_img img {
       transition: transform 0.3s ease-in-out; /* 부드러운 확대 효과 */
-  }
-  
-  .ginseng_img:hover img {
+    }
+
+    .ginseng_img:hover img {
       transform: scale(1.1); /* 호버 시 10% 확대 */
+    }
   }
-  
-   }
 
-   .TopBox03{
-
+  .TopBox03 {
     height: 790px;
     flex: 1;
     display: flex;
     flex-direction: column;
 
-    .cover{
+    .cover {
       margin-top: auto;
       width: 633px;
       flex: 1;
 
-      .cream_medel{
+      .cream_medel {
         width: 0;
         overflow: hidden;
 
-        img{
-          scale:1.3
-        }
-      }
-    }
-    
-   }
-
-
-.Bottom_Section{
-  padding-right: 80px;  
-  margin-top: 180px;
-  
-  display: flex; /* 부모 요소를 플렉스로 설정 */
-  flex-direction: row; /* 가로 배치 */
-  gap: 26px; /* 두 박스 사이 간격 */
-  justify-content: end;
-  align-items: flex-start; /* 위쪽 정렬 */
-  
- 
-  .bottombox01{
-    display: flex;
-    flex-direction: row;
-    gap: 26px;
-
-    .cover2{
-      margin-top: auto;
-      width: 640px;
-      flex: 1;
-
-      .serum_director{
-        width: 0;
-        overflow: hidden;
-
-        img{
-          scale:1.3
+        img {
+          scale: 1.3;
         }
       }
     }
   }
 
-  .bottombox02{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .Bottom_Section {
+    padding-right: 80px;
+    margin-top: 180px;
+
+    display: flex; /* 부모 요소를 플렉스로 설정 */
+    flex-direction: row; /* 가로 배치 */
+    gap: 26px; /* 두 박스 사이 간격 */
     justify-content: end;
-     align-items: center; /* 두 요소의 중심을 맞춤 */
-     gap: 68px;
-     margin-top: auto;
-     margin-left: 108px;
+    align-items: flex-start; /* 위쪽 정렬 */
 
-     .ginsengS_img {
-      display: inline-block; /* 요소 크기 조절을 위해 inline-block 설정 */
-  }
-  
-  .ginsengS_img img {
-      transition: transform 0.3s ease-in-out; /* 부드러운 확대 효과 */
-  }
-  
-  .ginsengS_img:hover img {
-      transform: scale(1.1); /* 호버 시 10% 확대 */
-  }
+    .bottombox01 {
+      display: flex;
+      flex-direction: row;
+      gap: 26px;
+
+      .cover2 {
+        margin-top: auto;
+        width: 640px;
+        flex: 1;
+
+        .serum_director {
+          width: 0;
+          overflow: hidden;
+
+          img {
+            scale: 1.3;
+          }
+        }
+      }
+    }
+
+    .bottombox02 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: end;
+      align-items: center; /* 두 요소의 중심을 맞춤 */
+      gap: 68px;
+      margin-top: auto;
+      margin-left: 108px;
+
+      .ginsengS_img {
+        display: inline-block; /* 요소 크기 조절을 위해 inline-block 설정 */
+      }
+
+      .ginsengS_img img {
+        transition: transform 0.3s ease-in-out; /* 부드러운 확대 효과 */
+      }
+
+      .ginsengS_img:hover img {
+        transform: scale(1.1); /* 호버 시 10% 확대 */
+      }
     }
   }
-  } 
-  
+}
+
 /* *****height 초기화시켜서 맞춰줌***** */
-.section05{
-  .section5_bg{
+.section05 {
+  .section5_bg {
     background-image: url(/section05/section05_bg.png);
     display: flex;
     flex-direction: row;
     height: initial;
   }
 
-
-.section5_left{
-  display: flex;
-  flex-direction: column;
-  align-items: center;     
-  justify-content: center; 
-  width:  1136px;
-  
-  
-  .section5_left_textbox{
+  .section5_left {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    width: 1136px;
 
-    .section5_header{
-      margin-bottom: 33px;
-    }
-  
-    .section_title{
+    .section5_left_textbox {
       display: flex;
       flex-direction: column;
-      gap: 30px;
-      margin-bottom: 66px; 
-    }
-  
-    .section5_contents{
-      display: flex;
-      flex-direction: column;
-      gap: 45px;
+      align-items: flex-start;
+
+      .section5_header {
+        margin-bottom: 33px;
+      }
+
+      .section_title {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 66px;
+      }
+
+      .section5_contents {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+      }
+
+      .section5_view_btn {
+        margin-top: 98px;
+      }
     }
 
-    .section5_view_btn{
-      margin-top: 98px;
+    /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
+    .section5_left_textbox > * {
+      overflow: hidden;
     }
+
+    .section5_left_textbox img {
+      transform: translateY(300%);
+    }
+    /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
   }
 
-   /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
-   .section5_left_textbox > *{
-    overflow: hidden;
- }
+  .section5_right {
+    width: 684px;
+    height: 945px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-right: 108px;
 
- .section5_left_textbox img{
-  transform: translateY(300%);
- }
-   /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
-
-}
-
-.section5_right{
-  width: 684px;
-  height: 945px;
-  display: flex;
-  flex-direction: column;
-  gap: 21px;
-  margin-right: 108px;
-
-  .right_img1 .right_img2{
-    width: 682px;
-    height: 462px;
+    .right_img1 .right_img2 {
+      width: 682px;
+      height: 462px;
+    }
   }
 }
-}
 
-
-.section06{
+.section06 {
   margin-top: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: initial;
-  
-  .secion6_card_box{
+
+  .secion6_card_box {
     width: 1546px;
     height: 806px;
     display: flex;
@@ -512,13 +489,13 @@ transform: translateY(300%);
     gap: 48px;
     position: relative;
 
-    .viewmore_btn{
+    .viewmore_btn {
       position: absolute;
       top: 0px;
       right: 467px;
     }
 
-    .section6_box1{
+    .section6_box1 {
       width: 390px;
       height: 806px;
       display: flex;
@@ -526,33 +503,33 @@ transform: translateY(300%);
       padding-top: 15px;
       box-sizing: border-box;
 
-      .section6_title_box{
+      .section6_title_box {
         display: flex;
         flex-direction: column;
-       
-        .section6_header{
+
+        .section6_header {
           margin-bottom: 30px;
         }
 
-        .section6_title2{
+        .section6_title2 {
           margin-left: 112px;
           margin-top: 26px;
           margin-bottom: 42px;
         }
       }
 
-   /*************⭐️택스트 올라오는 애니메이션⭐️**************/
-   .section6_title_box > *{
-    overflow: hidden;
- }
+      /*************⭐️택스트 올라오는 애니메이션⭐️**************/
+      .section6_title_box > * {
+        overflow: hidden;
+      }
 
- .section6_title_box img{
-  transform: translateY(300%);
- }
-   /*************⭐️텍스트 올라오는 애니메이션⭐️**************/
+      .section6_title_box img {
+        transform: translateY(300%);
+      }
+      /*************⭐️텍스트 올라오는 애니메이션⭐️**************/
     }
-  
-    .section6_box2{
+
+    .section6_box2 {
       width: 644px;
       height: 806px;
       display: flex;
@@ -560,227 +537,212 @@ transform: translateY(300%);
       justify-content: end;
       margin-top: auto;
 
-      .cover3{
+      .cover3 {
         margin-top: 30px;
         width: 642px;
         flex: 1;
-  
-        .section6_img2{
+
+        .section6_img2 {
           width: 0;
           overflow: hidden;
-  
-          img{
-            scale:1.3
+
+          img {
+            scale: 1.3;
           }
         }
       }
     }
-  
-    .section6_box3{
+
+    .section6_box3 {
       width: 418px;
       height: 806px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
     }
-  /*************❓⭐️타이틀 올라오는 애니메이션⭐️❓**************/
-  .section6_detail_text_box > *{
-    overflow: hidden;
- }
+    /*************❓⭐️타이틀 올라오는 애니메이션⭐️❓**************/
+    .section6_detail_text_box > * {
+      overflow: hidden;
+    }
 
- .section6_detail_text_box img{
-  transform: translateY(300%);
- }
-   /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
-    .img3{
+    .section6_detail_text_box img {
+      transform: translateY(300%);
+    }
+    /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
+    .img3 {
       margin-bottom: 28px;
     }
-    .contents{
+    .contents {
       margin-top: 22px;
     }
   }
 }
 
-.section07{
+.section07 {
   height: initial;
-  margin-top: 200px; 
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
- /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
- .section7_head > *{
-  overflow: hidden;
-}
+  /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
+  .section7_head > * {
+    overflow: hidden;
+  }
 
-.section7_head img{
-transform: translateY(300%);
-}
- /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
-  
-  
+  .section7_head img {
+    transform: translateY(300%);
+  }
+  /*************⭐️타이틀 올라오는 애니메이션⭐️**************/
 
-  .section7_head{
+  .section7_head {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 58px;
 
-    
-
-    .section7_header{
+    .section7_header {
       margin-bottom: 30px;
     }
   }
 
-
-  .section7_bottom{
+  .section7_bottom {
     width: 1740px;
     height: 580px;
     display: flex;
     align-items: center;
     gap: 34px;
 
-   /* 공통 스타일 */
-.hover_effect {
-  position: relative;
-  overflow: hidden; /* 넘치는 요소 감추기 */
-}
+    /* 공통 스타일 */
+    .hover_effect {
+      position: relative;
+      overflow: hidden; /* 넘치는 요소 감추기 */
+    }
 
-.hover_effect img {
-  width: 100%;
-  display: block;
-  transition: transform 0.5s ease-in-out;
-}
+    .hover_effect img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s ease-in-out;
+    }
 
-/* 오버레이 (기본적으로 숨김) */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #ff7300a0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
+    /* 오버레이 (기본적으로 숨김) */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ff7300a0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
 
-/* 원형 테두리 */
-.circle {
-  width: 500px;
-  height: 500px;
-  border: 1px solid white;
-  border-radius: 50%;
-  position: absolute;
-}
+    /* 원형 테두리 */
+    .circle {
+      width: 500px;
+      height: 500px;
+      border: 1px solid white;
+      border-radius: 50%;
+      position: absolute;
+    }
 
-/* 텍스트 스타일 */
-.overlay a {
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
+    /* 텍스트 스타일 */
+    .overlay a {
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
 
-  /* 🔥텍스트에 마우스 올리면 포인터로 바꼈으면 좋겠음!!🔥 */
-  cursor: pointer;
-  display: inline-block; /* 너비와 높이를 가질 수 있도록 변경 */
-  padding: 10px 20px; /* 클릭할 수 있는 영역을 확장 */
-}
+      /* 🔥텍스트에 마우스 올리면 포인터로 바꼈으면 좋겠음!!🔥 */
+      cursor: pointer;
+      display: inline-block; /* 너비와 높이를 가질 수 있도록 변경 */
+      padding: 10px 20px; /* 클릭할 수 있는 영역을 확장 */
+    }
 
-/* 호버 시 효과 */
-.hover_effect:hover .overlay {
-  opacity: 1;
-}
+    /* 호버 시 효과 */
+    .hover_effect:hover .overlay {
+      opacity: 1;
+    }
 
-.hover_effect:hover img {
-  transform: scale(1.1); /* 호버 시 살짝 확대 */
-}
-
-
+    .hover_effect:hover img {
+      transform: scale(1.1); /* 호버 시 살짝 확대 */
+    }
   }
 }
 
-
 @keyframes text {
-  to{
+  to {
     transform: translateX(-1261px);
   }
 }
-.textline_deco{
+.textline_deco {
   height: initial;
   margin-top: 210px;
   margin-bottom: 38px;
 
-  .textdeco{
+  .textdeco {
     display: flex;
     width: fit-content;
     gap: 10px;
-    animation:text 6s infinite linear
+    animation: text 6s infinite linear;
   }
 }
 
-.section08{
+.section08 {
   height: initial;
-  .footer_bg{
+  .footer_bg {
     background-image: url(/section08/footer_bg.png);
     height: 1424px;
 
-    .topsection_sns{
-     
-      .with_sulwhasoo{
+    .topsection_sns {
+      .with_sulwhasoo {
         display: flex;
         justify-content: end;
-       padding-top: 180px;
-       padding-right: 86px;
+        padding-top: 180px;
+        padding-right: 86px;
       }
 
-      .sns_picture{
+      .sns_picture {
         display: flex;
         justify-content: space-between;
         padding-top: 48px;
-
       }
-
     }
 
-    .bottom_section{
+    .bottom_section {
       margin-top: 138px;
       display: flex;
 
-      .bottom_left{
+      .bottom_left {
         margin-left: 94px;
         width: 960px;
         display: flex;
         flex-direction: column;
 
-        .logo{
+        .logo {
           margin-bottom: 146px;
         }
-        .promotion_enjoy{
+        .promotion_enjoy {
           margin-bottom: 28px;
         }
       }
 
-      .bottom_right{
+      .bottom_right {
         width: 960px;
         padding-left: 94px;
         /* background-color: black; */
         display: flex;
         flex-direction: column;
         gap: 120px;
-        
       }
     }
-
-    
   }
 }
-

@@ -225,31 +225,31 @@ header {
     display: flex;
     gap: 47px;
     cursor: pointer;
-    
+
     /* ********⭐️gnb호버했을 때 닷 뜨는 거, content가 공란이더라도 반드시 있어야함⭐️******** */
-    li:before{
-      content: '';
+    li:before {
+      content: "";
       width: 7px;
       height: 7px;
       border-radius: 50%;
       background: white;
       position: absolute;
       left: -15px;
-      transform:translateY(-50%);
+      transform: translateY(-50%);
       top: 50%;
       opacity: 0;
-      transition:all .5s;
-    };
+      transition: all 0.5s;
+    }
 
     li {
       position: relative;
-      
-      &:hover:before  {
+
+      &:hover:before {
         opacity: 1;
         left: -10px;
       }
     }
-     /* ********⭐️gnb호버했을 때 닷 뜨는 거, before에서 opacity:0으로 줘서 안보이게 해놨다가 아래 호버에서 opacity:1로 보이게 함⭐️******** */
+    /* ********⭐️gnb호버했을 때 닷 뜨는 거, before에서 opacity:0으로 줘서 안보이게 해놨다가 아래 호버에서 opacity:1로 보이게 함⭐️******** */
   }
 
   .logo {
@@ -264,7 +264,7 @@ header {
     gap: 47px;
     align-items: center;
 
-    .shoppingsvg{
+    .shoppingsvg {
       scale: 0.8;
     }
 
@@ -276,36 +276,42 @@ header {
   }
 }
 
-.footer{
+.footer {
   background-image: url(/section08/footer_bg.png);
-  .bottom_section{
+  .bottom_section {
     margin-top: 138px;
     display: flex;
-  
-    .bottom_left{
+
+    .bottom_left {
       margin-left: 94px;
       width: 960px;
       display: flex;
       flex-direction: column;
-  
-      .logo{
+
+      .logo {
         margin-bottom: 146px;
       }
-      .promotion_enjoy{
+      .promotion_enjoy {
         margin-bottom: 28px;
       }
     }
-  
-    .bottom_right{
+
+    .bottom_right {
       width: 960px;
       padding-left: 94px;
       /* background-color: black; */
       display: flex;
       flex-direction: column;
       gap: 120px;
-      
     }
   }
-  
-  
+}
+
+.imgEffect {
+  overflow: hidden;
+  transform: translateY(50px);
+
+  img {
+    transform: scale(1.5);
+  }
 }

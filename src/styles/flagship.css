@@ -1,198 +1,196 @@
-body{
-    background-color: white;
-    color: black;
+body {
+  background-color: white;
+  color: black;
 }
 
-
-button{
-    all:unset;
+button {
+  all: unset;
 }
 
-header{
-    color: black;
+header {
+  color: black;
 
-    .gnb{
-        li:before{
-            content: '';
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background:#e66a00;
-            position: absolute;
-            left: -15px;
-            transform:translateY(-50%);
-            top: 50%;
-            opacity: 0;
-            transition:all .5s;
-          };
+  .gnb {
+    li:before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #e66a00;
+      position: absolute;
+      left: -15px;
+      transform: translateY(-50%);
+      top: 50%;
+      opacity: 0;
+      transition: all 0.5s;
     }
+  }
 }
 
+.section01 {
+  height: initial;
+  padding-bottom: 167px;
 
-.section01{
-    height: initial;
-    padding-bottom: 167px;
-
-.main{
+  .main {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    .main-visual{
-        margin-top: 98px;
+    .main-visual {
+      margin-top: 98px;
     }
 
+    .title-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-    .title-box{
-       
-        position: absolute; 
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      .header {
+        margin-bottom: 21px;
+      }
 
-        .header{
-            margin-bottom: 21px;
-        }
-
-        .title{
-            margin-bottom: 52px;
-        }
-
-}
-   
-}
+      .title {
+        margin-bottom: 52px;
+      }
+    }
+  }
 }
 
-.section02{
-    height: initial;
-    position: relative;
+.section02 {
+  height: initial;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  gap: 78px;
+
+  /* 일단 꺼놓음 */
+  .category {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .bottom-box {
     display: flex;
-    flex-direction: column;
-    justify-self: center;
     align-items: center;
-    gap: 78px;
-   
-    /* 일단 꺼놓음 */
-    .category{
+    gap: 80px;
+
+    .bukchon-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 40px;
+
+      &.active {
+        color: #e66a00;
+        border-bottom: 1px solid orange;
+      }
+
+      .bukchon-btn {
+        font-size: 2rem;
+        color: #acacac;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &.active {
+          color: #e66a00;
+          border-bottom: 1px solid orange;
+          width: 150px;
+        }
+      }
+
+      .bukchon-en {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        visibility: hidden;
+
+        &.active {
+          opacity: 1;
+          transform: translateY(0);
+          visibility: visible;
+        }
+      }
+    }
+
+    .store-imgbox {
+      width: 805px;
+      height: 805px;
+      border-radius: 50%;
+      background-color: #e66a00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+
+      &::after {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transform: scale(1.1);
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+      }
+
+      &.active1::after {
+        background-image: url("/public/flagship/buk-img.png");
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      &.active2::after {
+        background-image: url("/public/flagship/dosan-img.png");
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
-    .bottom-box{
-        display: flex;
-        align-items: center;
-        gap: 80px;
-        
-      .bukchon-section{
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            gap: 40px;
+    .dosan-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 40px;
 
-            &.active{
-                color: #e66a00;
-                border-bottom: 1px solid orange;
-            }
+      .dosan-btn {
+        font-size: 2rem;
+        color: #acacac;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
 
-        
-            .bukchon-btn{
-                font-size: 2rem;
-                color: #acacac;
-                cursor: pointer;
-                transition: all 0.2s ease-in-out;
-    
-                &.active{
-                    color: #e66a00;
-                    border-bottom: 1px solid orange;
-                    width: 150px;
-                }
-            }
-
-            .bukchon-en{
-             opacity: 0; 
-             transform: translateY(50px); 
-             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-             visibility: hidden;
-
-             &.active{
-                opacity: 1;
-                transform: translateY(0); 
-                visibility: visible
-             }
-            }
+        &.active {
+          color: #e66a00;
+          border-bottom: 1px solid orange;
+          width: 150px;
         }
+      }
 
-       .store-imgbox{
-        width: 805px;
-        height: 805px;
-        border-radius: 50%;
-        background-color: #e66a00;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        position: relative; 
+      .dosan-en {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        visibility: hidden;
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('/public/flagship/buk-img.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0; 
-            transform: scale(1.1); 
-            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        &.active {
+          opacity: 1;
+          transform: translateY(0);
+          visibility: visible;
         }
-
-        &.active::after {
-            opacity: 1; 
-            transform: scale(1); 
-        }
-       }
-
-       .dosan-section{
-        display: flex;
-            flex-direction: column;
-            justify-content: start;
-            gap: 40px;
-        
-            .dosan-btn{
-                font-size: 2rem;
-                color: #acacac;
-                cursor: pointer;
-                transition: all 0.2s ease-in-out;
-    
-                &.active{
-                    color: #e66a00;
-                    border-bottom: 1px solid orange;
-                    width: 150px;
-                }
-            }
-
-            .dosan-en{
-                opacity: 0; 
-                transform: translateY(50px); 
-                transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-                visibility: hidden;
-   
-                &.active{
-                   opacity: 1;
-                   transform: translateY(0); 
-                   visibility: visible
-                }
-               }
-       }
+      }
     }
-
-
+  }
 }
