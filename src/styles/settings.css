@@ -307,11 +307,12 @@ header {
   }
 }
 
+/* 💖이거 클래스로 사용하기! */
 .imgEffect {
   overflow: hidden;
   transform: translateY(50px);
 
   img {
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
 }

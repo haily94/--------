@@ -12,6 +12,7 @@ const config = defineConfig({
         main: resolve(__dirname, "index.html"),
         detail: resolve(__dirname, "detail.html"),
         flagship: resolve(__dirname, "flagship.html"),
+        //여기에다가 만드는 페이지 다 추가하기!
       },
     },
   },

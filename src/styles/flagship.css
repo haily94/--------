@@ -77,16 +77,18 @@ header {
     left: 0;
   }
 
-  .bottom-box {
+  .middle-box {
     display: flex;
     align-items: center;
     gap: 80px;
+    
 
     .bukchon-section {
       display: flex;
       flex-direction: column;
       justify-content: start;
       gap: 40px;
+  
 
       &.active {
         color: #e66a00;
@@ -192,5 +194,23 @@ header {
         }
       }
     }
+  }
+
+  .bottom-section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    .title{
+        margin-bottom: 40px;
+    }
+    .header{
+        margin-bottom: 46px;
+    }
+  }
+
+  .img-section{
+    display: flex;
+    
   }
 }

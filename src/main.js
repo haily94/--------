@@ -183,7 +183,7 @@ ScrollTrigger.create({
 const svg2 = document.querySelector(".circle_svg2"); //circle02 이펙트(svg, legnth가 써클01이랑 동일하면 안됌)
 const length2 = svg2.getTotalLength();
 gsap.set(svg2, { strokeDashoffset: length2, strokeDasharray: length2 });
-// gsap.to(svg2,{strokeDashoffset:0})
+
 
 ScrollTrigger.create({
   trigger: ".section04",
@@ -201,7 +201,7 @@ ScrollTrigger.create({
       ease: "power3.inOut",
     });
   },
-  animation: gsap.to(svg2, { duration: 5, strokeDashoffset: 0 }), //🔥이것도 그려지는 방향이 뭔가 이상함
+  animation: gsap.to(svg2, { duration: 5, strokeDashoffset: 0 }), 
   // pin: false,
   // pinSpacing: false,
   // markers: true,
@@ -227,6 +227,7 @@ ScrollTrigger.create({
   scrub: true,
 });
 
+//*************스크롤 이미지 이펙트************** */
 const imgs = document.querySelectorAll(".imgEffect");
 
 imgs.forEach((img) => {
@@ -240,9 +241,10 @@ imgs.forEach((img) => {
     end: "bottom center",
     animation: tl,
     scrub: true,
-    markers: true,
+    // markers: true,
   });
 });
+//*************스크롤 이미지 이펙트************** */
 
 //✏️section 06-1✏️
 ScrollTrigger.create({

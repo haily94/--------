@@ -255,6 +255,7 @@ video {
     svg {
       width: 850px;
       height: 850px;
+      transform: rotate(100deg);
     }
   }
 
