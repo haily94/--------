@@ -105,7 +105,7 @@ const state = [
 list.forEach((li,i)=>{
   li.addEventListener('click',({currentTarget})=>{
 
-    const btn = currentTarget.querySelector('.minus');
+    const btn = currentTarget.querySelector('.plus');
     const depth = currentTarget.querySelector('.depth');
 
     state[i].clicked = !(state[i].clicked); // 토글 스위치
@@ -119,11 +119,10 @@ list.forEach((li,i)=>{
     let height = 0;
 
     switch (i) {
-      case 0: height = current ? 200 : 80 ;break;
-      case 1: height = current ? 300 : 80 ;break;
-      case 2: height = current ? 400 : 80 ;break;
-      case 3: height = current ? 500 : 80 ;break;
-      case 4: height = current ? 600 : 80 ;break;
+      case 0: height = current ? 131 : 104 ;break;
+      case 1: height = current ? 203 : 104 ;break;
+      case 2: height = current ? 131 : 104 ;break;
+      case 3: height = current ? 107 : 104 ;break;
     }
     
     gsap.to(currentTarget,{height})

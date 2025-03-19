@@ -10,6 +10,7 @@ button{
 header{
     color: black;
 
+
     .gnb{
         li:before{
             content: '';
@@ -33,6 +34,7 @@ header{
     display: flex;
     flex-direction: row;
     height: initial;
+    padding-bottom: 38px;
 
     .leftsection{
         margin-left: 85px;
@@ -50,7 +52,7 @@ header{
         }
     }
 
-.rightsection{
+    .rightsection{
    flex: 1;
    margin-top: 160px;
    padding-left: 80px;
@@ -151,7 +153,7 @@ header{
 
             .amoun-box{
                 width: 134px;
-                height: 36px;
+                height: 40px;
                 border: solid 1px #c2c2c2; 
                 color: #434343;
                 display: flex;
@@ -161,9 +163,12 @@ header{
                 gap:20px;
 
                 button{
-                    background-color: red;
                     padding: 0.5rem;
                     cursor: pointer;
+                }
+                
+                span{
+                    font-weight: 600;
                 }
             }
         }
@@ -242,16 +247,28 @@ header{
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
 
-            &:hover{
-                background-color: #e66a00; 
+            &:after {
+                content: "→";
+                position: absolute;
+                top: 33%;
+                right: -60px; /* 초기에 버튼 오른쪽 바깥에 위치 */
+                width: 60px;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.641);
+                transition: all 0.3s ease-in-out;
             }
 
-            &:active{
-                /* transform:translate(1px,1px); */
-                
-            }
+            &:hover {
+                text-indent: -30px; /* 텍스트를 왼쪽으로 이동 */
         }
+        
+
+
+
 
         .buy-btn{
             all: unset; 
@@ -273,12 +290,16 @@ header{
       
     }
 }
+    }
 }
+  
 
 
 .section02{
     display: flex;
     flex-direction: row;
+    height: initial;
+    padding-bottom: 220px;
 
     .left-section{
         flex: 1;
@@ -290,6 +311,9 @@ header{
 
     .right-detailsection{
         flex: 1;
+        padding-left: 80px;
+        margin-top: 10px;
+    
 
         & > ul{
 
@@ -300,10 +324,10 @@ header{
                 display: flex;
                 align-items: center;
 
-                .minus{
+                .plus{
                     position: absolute;
                     right: 10px;
-                    top: 10px;
+                    top: 45%;
                     cursor:pointer
                 }
 
@@ -327,17 +351,73 @@ header{
         }
 
         /* 이렇게 맞춰주는게 맞나?! */
-        .how-title{
-            margin-right: 122px;
+        .how-title,.active-title,.texture-title,.skin-title{
+           width: 220px;
         } 
-        .active-title{
-            margin-right: 118px;
-        } 
-        .texture-title{
-            margin-right: 154px;
-        } 
-        .skin-title{
-            margin-right: 144px;
-        }
+     
     }
+}
+
+
+.section03{
+    height: initial;
+    margin-bottom: 170px;
+    
+    .main-title{
+        margin-bottom: 65px;
+        padding-left: 85px;
+        
+    }
+    .swiper-wrappepr{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        .alsolike-swiper-slide{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 22px;
+            position: relative;
+
+            
+
+            .detail{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width:  409px;
+                height: 452px;
+                background: #ff7300a0;
+                backdrop-filter: blur(7px);
+                opacity: 0;
+                transition: all .5s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                
+        
+                /* paddign bottom으로 밑줄과 텍스트 사이에 간격을 줌  */
+                span{
+                  padding-bottom: 3px;
+                  font-weight: 500;
+                  font-size: 18px;
+                  
+                  &:hover{
+                    border-bottom: 2px solid white;
+                  }
+                }
+              }
+        
+              &:hover .detail{
+                opacity: 1;
+              }
+        }
+
+    }
+}
+.footer{
+    height: 724px;
+    display: flex;
 }

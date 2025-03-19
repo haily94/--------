@@ -140,11 +140,11 @@ transform: translateY(300%);
       position: relative;
 
       .detail{
-        width:  423px;
-        height: 502px;
         position: absolute;
         left: 0;
         top: 0;
+        width:  423px;
+        height: 502px;
         background: #ff7300a0;
         backdrop-filter: blur(7px);
         opacity: 0;
